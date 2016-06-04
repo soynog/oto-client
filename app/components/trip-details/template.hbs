@@ -1,4 +1,13 @@
-<h3>{{trip.name}}</h3>
-<p>Location: {{trip.location}}</p>
-<p>Dates: {{trip.startDate}} to {{trip.endDate}}</p>
-<p>{{trip.description}}</p>
+<form {{action "submit" form on="submit" }}>
+  <h3>
+    <span class="trip-name" contenteditable>{{trip.name}}</span>
+  </h3>
+  <p>Location:
+    <span class="trip-location" contenteditable>{{trip.location}}</span>
+  </p>
+  <p>Dates: {{trip.startDate}} to {{trip.endDate}}</p>
+  <p>Description:
+    <span class="trip-description" contenteditable>{{trip.description}}</span>
+  </p>
+  <input type="submit" value="Submit Changes">
+</form>
