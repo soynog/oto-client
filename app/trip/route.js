@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  flashMessages: Ember.inject.service(),
+
   model (params) {
     return this.get('store').findRecord('trip', params.trip_id);
   },
@@ -18,7 +20,11 @@ export default Ember.Route.extend({
         trip.set('description', data.description);
         return trip;
       })
-      .then((trip) => trip.save());
+      .then((trip) => trip.save())
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('Please sign in to edit a trip.');
+      });
     }
   }
 });

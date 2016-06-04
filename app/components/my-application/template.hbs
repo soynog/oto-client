@@ -24,11 +24,10 @@
 
 <h1>Welcome to OTO!</h1>
 
+<div class="col-md-8 col-md-offset-2">
+  {{outlet}}
+</div>
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
 {{/each}}
-
-<div class="col-md-8 col-md-offset-2">
-  {{outlet}}
-</div>
