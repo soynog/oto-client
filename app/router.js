@@ -10,7 +10,9 @@ Router.map(function () {
   this.route('sign-in');
   this.route('change-password');
   this.route('users');
-  this.route('trips');
+  this.route('trips', function() {
+    this.route('new');
+  });
   this.route('trip', {path: '/trips/:trip_id'});
 });
 
