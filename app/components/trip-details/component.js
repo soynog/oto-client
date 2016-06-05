@@ -15,6 +15,8 @@ export default Ember.Component.extend({
 
     deleteTrip () {
       console.log("Delete Trip Clicked");
+      let trip = this.get('trip');
+      this.sendAction('deleteTrip', trip);
     }
-  }
+  },
 });

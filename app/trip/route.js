@@ -25,6 +25,12 @@ export default Ember.Route.extend({
         this.get('flashMessages')
         .danger('Please sign in to edit a trip.');
       });
+    },
+
+    deleteTrip (trip) {
+      console.log("Delete Trip Action Fired", trip);
+      trip.destroyRecord()
+      .then(this.transitionTo('trips'));
     }
   }
 });
