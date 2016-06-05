@@ -11,6 +11,10 @@ export default Ember.Component.extend({
       console.log("Trip Update Form Submitted", trip);
 
       this.sendAction('submit', trip);
+    },
+
+    deleteTrip () {
+      console.log("Delete Trip Clicked");
     }
   }
 });
