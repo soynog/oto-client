@@ -1,18 +1,7 @@
-<h2>Create New Trip</h2>
 <form {{action "submit" form on="submit" }}>
-  {{input placeholder="Trip Name"
-          class="input-group form-control"
+  {{input placeholder="Name"
           value=form.name}}
-  {{input placeholder="Trip Location"
-          class="input-group form-control"
-          value=form.location}}
-  {{input placeholder="Trip Start Date"
-          class="input-group form-control"
-          value=form.startDate}}
-  {{input placeholder="Trip End Date"
-          class="input-group form-control"
-          value=form.endDate}}
-  {{input placeholder="Trip Description"
-          class="input-group form-control"
+  {{input placeholder="description"
           value=form.description}}
+  {{input type="submit"}}
 </form>
