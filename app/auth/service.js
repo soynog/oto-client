@@ -31,6 +31,7 @@ export default Ember.Service.extend({
       this.get('credentials').set('id', result.user.id);
       this.get('credentials').set('email', result.user.email);
       this.get('credentials').set('token', result.user.token);
+      console.log("This is...",this.get('credentials'));
     });
   },
 
