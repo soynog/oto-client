@@ -16,3 +16,9 @@
 </p>
 <button {{action "submit"}}>Submit Changes</button>
 <button {{action "deleteTrip"}} class="btn btn-danger">Delete Trip</button>
+<h4>Invitations</h4>
+<ul>
+  {{#each trip.invitations as |invitation|}}
+    <li>{{invitation.user.email}}, {{invitation.status}}</li>
+  {{/each}}
+</ul>
