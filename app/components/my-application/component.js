@@ -18,7 +18,7 @@ export default Ember.Component.extend({
     },
     submit () {
       console.log("Submit Clicked", this.get('credentials'));
-      // this.sendAction('submit', this.get('credentials'));
+      this.sendAction('submit', this.get('credentials'));
     },
   },
 });
