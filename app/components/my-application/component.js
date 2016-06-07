@@ -14,5 +14,8 @@ export default Ember.Component.extend({
     signIn (credentials) {
       this.sendAction('signIn', credentials);
     },
+    signUp (credentials) {
+      this.sendAction('signUp', credentials);
+    },
   },
 });

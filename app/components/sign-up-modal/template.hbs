@@ -1,0 +1,29 @@
+<button {{action "toggleModal"}}>Sign Up</button>
+
+{{#if isShowingModal}}
+  {{#modal-dialog close="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true
+                  clickOutsideToClose=true}}
+    {{email-input email=credentials.email}}
+    <label for="email">Name</label>
+    {{input type="text"
+            id="first-name"
+            placeholder="First Name"
+            value=credentials.firstName}}
+    {{input type="text"
+            id="last-name"
+            placeholder="Last Name"
+            value=credentials.lastName}}
+    {{password-input password=credentials.password}}
+    {{password-confirmation-input password=credentials.passwordConfirmation}}
+
+    <button type="submit" class="btn btn-primary" {{action "signUp"}}>
+      Sign Up
+    </button>
+
+    <button class="btn btn-default" {{action "toggleModal"}}>
+      Cancel
+    </button>
+  {{/modal-dialog}}
+{{/if}}
