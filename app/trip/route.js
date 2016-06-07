@@ -8,6 +8,10 @@ export default Ember.Route.extend({
   flashMessages: Ember.inject.service(),
 
   model (params) {
+    this.get('store').findRecord('trip', params.trip_id).then((trip) => {
+      console.log("Trip is: ", trip.get('name'));
+      console.log("Invitations: ", trip.get('invitations'));
+    });
     return this.get('store').findRecord('trip', params.trip_id);
   },
   actions: {

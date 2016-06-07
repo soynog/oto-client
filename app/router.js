@@ -14,6 +14,7 @@ Router.map(function () {
     this.route('new');
   });
   this.route('trip', {path: '/trips/:trip_id'});
+  this.route('invitations');
 });
 
 export default Router;
