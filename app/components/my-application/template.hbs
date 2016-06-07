@@ -28,6 +28,17 @@
   {{outlet}}
 </div>
 
+<button {{action "toggleModal"}}>Toggle Modal</button>
+
+{{#if isShowingModal}}
+<h1>Showing Modal!</h1>
+{{#modal-dialog close="toggleModal"
+                targetAttachment="center"
+                translucentOverlay=true}}
+  Oh hai there!
+{{/modal-dialog}}
+{{/if}}
+
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
 {{/each}}
