@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+{{!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
     {{navbar-header}}
 
@@ -20,15 +20,17 @@
       </ul>
     </div>
   </div>
-</nav>
-
-<h1>Welcome to OTO!</h1>
+</nav> --}}
 
 <div class="col-md-8 col-md-offset-2">
   {{outlet}}
 </div>
 
-<button {{action "toggleModal"}}>Toggle Modal</button>
+{{#if isAuthenticated}}
+  <button {{action "signOut"}}>Log Out</button>
+{{else}}
+  <button {{action "toggleModal"}}>Log In</button>
+{{/if}}
 
 {{#if isShowingModal}}
   {{#modal-dialog close="toggleModal"
