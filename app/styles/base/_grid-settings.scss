@@ -4,9 +4,12 @@
 // Custom Grid Settings
 $column: 40px;
 $gutter: 44px;
-$grid-columns: 12;
+$grid-columns: 4;
 $max-width: 2080px;
 
-// Define your breakpoints
-$tablet: new-breakpoint(max-width 780px 8);
-$mobile: new-breakpoint(max-width 480px 4);
+// Mobile-first breakpoints
+$desktop: new-breakpoint(min-width 780px 12);
+$tablet: new-breakpoint(min-width 480px 8);
+
+// $tablet: new-breakpoint(max-width 780px 8);
+// $mobile: new-breakpoint(max-width 480px 4);
