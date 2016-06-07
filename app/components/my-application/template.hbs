@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+{{!-- <nav class="navbar navbar-default">
   <div class="container-fluid">
     {{navbar-header}}
 
@@ -20,33 +20,20 @@
       </ul>
     </div>
   </div>
-</nav>
-
-<h1>Welcome to OTO!</h1>
+</nav> --}}
 
 <div class="col-md-8 col-md-offset-2">
   {{outlet}}
 </div>
 
-<button {{action "toggleModal"}}>Toggle Modal</button>
-
-{{#if isShowingModal}}
-  {{#modal-dialog close="toggleModal"
-                  targetAttachment="center"
-                  translucentOverlay=true
-                  clickOutsideToClose=true}}
-    {{email-input email=credentials.email}}
-    {{password-input password=credentials.password}}
-
-    <button type="submit" class="btn btn-primary" {{action "submit"}}>
-      Sign In
-    </button>
-
-    <button class="btn btn-default" {{action "toggleModal"}}>
-      Cancel
-    </button>
-  {{/modal-dialog}}
+{{#if isAuthenticated}}
+  <button {{action "signOut"}}>Sign Out</button>
+{{else}}
+  {{sign-in-modal signIn="signIn"}}
+  {{sign-up-modal signUp="signUp"}}
 {{/if}}
+
+
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}

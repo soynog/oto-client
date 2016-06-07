@@ -6,19 +6,16 @@ export default Ember.Component.extend({
   user: Ember.computed.alias('auth.credentials.email'),
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
-  isShowingModal: false,
-  credentials: {},
 
   actions: {
     signOut () {
       this.sendAction('signOut');
     },
-    toggleModal () {
-      this.toggleProperty('isShowingModal');
+    signIn (credentials) {
+      this.sendAction('signIn', credentials);
     },
-    submit () {
-      console.log("Submit Clicked", this.get('credentials'));
-      this.sendAction('submit', this.get('credentials'));
+    signUp (credentials) {
+      this.sendAction('signUp', credentials);
     },
   },
 });
