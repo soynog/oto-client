@@ -31,12 +31,20 @@
 <button {{action "toggleModal"}}>Toggle Modal</button>
 
 {{#if isShowingModal}}
-<h1>Showing Modal!</h1>
-{{#modal-dialog close="toggleModal"
-                targetAttachment="center"
-                translucentOverlay=true}}
-  Oh hai there!
-{{/modal-dialog}}
+  {{#modal-dialog close="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true}}
+    {{email-input email=credentials.email}}
+    {{password-input password=credentials.password}}
+
+    <button type="submit" class="btn btn-primary" {{action "submit"}}>
+      Sign In
+    </button>
+
+    <button class="btn btn-default" {{action "toggleModal"}}>
+      Cancel
+    </button>
+  {{/modal-dialog}}
 {{/if}}
 
 {{#each flashMessages.queue as |flash|}}
