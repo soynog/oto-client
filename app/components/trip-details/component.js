@@ -4,7 +4,7 @@ export default Ember.Component.extend({
   auth: Ember.inject.service(),
   user: Ember.computed.alias('auth.credentials.email'),
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
-  
+
   actions: {
     submit () {
       console.log(this);
@@ -21,6 +21,13 @@ export default Ember.Component.extend({
       console.log("Delete Trip Clicked");
       let trip = this.get('trip');
       this.sendAction('deleteTrip', trip);
+    },
+
+    joinTrip () {
+      let trip = this.get('trip');
+      let userId = this.get('auth.credentials.id');
+      console.log("Join Trip", trip, userId);
+      this.sendAction('joinTrip', trip, userId);
     }
   },
 });

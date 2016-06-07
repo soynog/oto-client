@@ -40,6 +40,30 @@ export default Ember.Route.extend({
       console.log("Delete Trip Action Fired", trip);
       trip.destroyRecord()
       .then(this.transitionTo('trips'));
+    },
+
+    joinTrip(trip, userId) {
+      console.log("Join Trip Action Fired", trip, userId);
+      this.get('store').findRecord('user', userId)
+      .then((user) => {
+        let data = {
+          status: "going",
+          trip,
+          user,
+        };
+        return data;
+      })
+      .then((data) => {
+        let invitation = this.get('store').createRecord('invitation', data);
+        invitation.save();
+      });
+      // let data = {
+      //   status: "going",
+      //   trip: trip,
+      //   user:
+      // }
+      // let invitation = this.get('store').createRecord('invitation', data);
+      // invitation.save()
     }
   }
 });
