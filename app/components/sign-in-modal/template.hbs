@@ -1,0 +1,19 @@
+<button {{action "toggleModal"}}>Sign In</button>
+
+{{#if isShowingModal}}
+  {{#modal-dialog close="toggleModal"
+                  targetAttachment="center"
+                  translucentOverlay=true
+                  clickOutsideToClose=true}}
+    {{email-input email=credentials.email}}
+    {{password-input password=credentials.password}}
+
+    <button type="submit" class="btn btn-primary" {{action "signIn"}}>
+      Sign In
+    </button>
+
+    <button class="btn btn-default" {{action "toggleModal"}}>
+      Cancel
+    </button>
+  {{/modal-dialog}}
+{{/if}}
