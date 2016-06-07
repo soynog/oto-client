@@ -3,10 +3,27 @@ $medium-screen: 600px;
 $large-screen: 900px;
 
 // Typography
-$base-font-family: $font-stack-system;
+// Font Stack
+$font-stack-oto: (
+  "Nunito",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  "Roboto",
+  "Oxygen",
+  "Ubuntu",
+  "Cantarell",
+  "Fira Sans",
+  "Droid Sans",
+  "Helvetica Neue",
+  sans-serif,
+);
+$base-font-family: $font-stack-oto;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
+$base-font-weight: 300;
+$heading-font-weight: $base-font-weight;
 $base-font-size: 1em;
 
 // Line height
