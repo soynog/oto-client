@@ -16,9 +16,9 @@ export default Ember.Component.extend({
     toggleModal () {
       this.toggleProperty('isShowingModal');
     },
-    submit () {
-      console.log("Submit Clicked", this.get('credentials'));
-      this.sendAction('submit', this.get('credentials'));
+    signIn () {
+      this.sendAction('signIn', this.get('credentials'));
+      this.toggleProperty('isShowingModal');
     },
   },
 });
