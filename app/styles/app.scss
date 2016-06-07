@@ -1,9 +1,15 @@
 // @import 'bootstrap';
 // @import 'bootstrap/theme';
+
+// Bourbon/neat/bitters
 @import "bourbon/bourbon";
 @import "base/grid-settings";
 @import "neat/neat";
 @import "base/base";
 
+// For modals
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";
+
+// For general layout an styling
+@import "main";
