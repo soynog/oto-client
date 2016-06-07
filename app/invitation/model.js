@@ -4,7 +4,6 @@ import { belongsTo } from 'ember-data/relationships';
 
 export default Model.extend({
   status: attr('string'),
-  // user: attr(),
   user: belongsTo('user'),
   trip: belongsTo('trip'),
 });
