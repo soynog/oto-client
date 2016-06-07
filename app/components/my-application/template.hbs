@@ -27,9 +27,9 @@
 </div>
 
 {{#if isAuthenticated}}
-  <button {{action "signOut"}}>Log Out</button>
+  <button {{action "signOut"}}>Sign Out</button>
 {{else}}
-  <button {{action "toggleModal"}}>Log In</button>
+  <button {{action "toggleModal"}}>Sign In</button>
 {{/if}}
 
 {{#if isShowingModal}}
