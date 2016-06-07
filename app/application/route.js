@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   actions: {
     signOut () {
       this.get('auth').signOut()
-      .then(() => this.transitionTo('sign-in'))
+      .then(() => this.transitionTo('application'))
       .then(() => {
         this.get('flashMessages').warning('You have been signed out.');
       })
@@ -26,13 +26,23 @@ export default Ember.Route.extend({
       if (unauthorized) {
         this.get('flashMessages')
         .danger('You must be authenticated to access this page.');
-        this.transitionTo('/sign-in');
+        // this.transitionTo('/sign-in');
       } else {
         this.get('flashMessages')
         .danger('There was a problem. Please try again.');
       }
 
       return false;
+    },
+
+    signIn (credentials) {
+      return this.get('auth').signIn(credentials)
+      .then(() => this.transitionTo('application'))
+      .then(() => this.get('flashMessages').success('Thanks for signing in!'))
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There was a problem. Please try again.');
+      });
     },
   },
 });

@@ -1,6 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  auth: Ember.inject.service(),
+  user: Ember.computed.alias('auth.credentials.email'),
+  isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
+
   flashMessages: Ember.inject.service(),
 
   model (params) {
@@ -8,6 +12,7 @@ export default Ember.Route.extend({
   },
   actions: {
     updateTrip (data) {
+      console.log("Authenticated?",this.get('isAuthenticated'));
       let id = this.context.get('id');
       let store = this.get('store');
       console.log("Update Trip Action Fired!", data, id);
