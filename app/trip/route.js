@@ -56,6 +56,10 @@ export default Ember.Route.extend({
       .then((data) => {
         let invitation = this.get('store').createRecord('invitation', data);
         invitation.save();
+      })
+      .catch(() => {
+        this.get('flashMessages')
+        .warning('Sorry, something went wrong. Have you already joined this trip?');
       });
       // let data = {
       //   status: "going",
