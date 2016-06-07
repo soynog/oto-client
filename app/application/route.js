@@ -37,7 +37,7 @@ export default Ember.Route.extend({
 
     signIn (credentials) {
       return this.get('auth').signIn(credentials)
-      .then(() => this.transitionTo('application'))
+      .then(() => this.refresh())
       .then(() => this.get('flashMessages').success('Thanks for signing in!'))
       .catch(() => {
         this.get('flashMessages')
@@ -49,7 +49,7 @@ export default Ember.Route.extend({
       console.log("Sign Up Action: ", credentials);
       this.get('auth').signUp(credentials)
       .then(() => this.get('auth').signIn(credentials))
-      .then(() => this.transitionTo('application'))
+      .then(() => this.refresh())
       .then(() => {
         this.get('flashMessages')
         .success('Successfully signed-up! You have also been signed-in.');
