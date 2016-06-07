@@ -33,7 +33,8 @@
 {{#if isShowingModal}}
   {{#modal-dialog close="toggleModal"
                   targetAttachment="center"
-                  translucentOverlay=true}}
+                  translucentOverlay=true
+                  clickOutsideToClose=true}}
     {{email-input email=credentials.email}}
     {{password-input password=credentials.password}}
 
