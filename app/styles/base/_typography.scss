@@ -19,6 +19,17 @@ h6 {
   margin: 0 0 $small-spacing;
 }
 
+h1.oto-logo {
+  // width: 271.5px;
+  height: 100px;
+  // font-family: SquareFont;
+  font-size: 96px;
+  font-weight: normal;
+  letter-spacing: 2.7px;
+  text-align: center;
+  color: $heading-font-color;
+}
+
 p {
   margin: 0 0 $small-spacing;
 }
