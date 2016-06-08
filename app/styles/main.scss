@@ -60,7 +60,18 @@ body {
 // User Auth Buttons
 .subtle-button {
   background-color: rgba($base-background-color, 0);
-  font-weight: normal;
-  font-size: modular-scale(1);
   color: $subtle-font-color;
+  font-size: modular-scale(1);
+  font-weight: normal;
+}
+
+.auth-button-container {
+  margin: $base-spacing 0 0;
+  text-align: right;
+
+  div,
+  button {
+    display: inline-block;
+    padding: $small-spacing / 2 $small-spacing / 2;
+  }
 }
