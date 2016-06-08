@@ -3,10 +3,8 @@
           value=form.name}}
   {{input placeholder="LOCATION"
           value=form.location}}
-  {{input placeholder="START DATE"
-          value=form.startDate}}
-  {{input placeholder="END DATE"
-          value=form.endDate}}
+  {{date-picker date=form.startDate valueFormat='ll'}}
+  {{date-picker date=form.endDate valueFormat='ll'}}
   {{input placeholder="DESCRIPTION"
           value=form.description}}
   {{input type="submit" class="highlight-button circle submit-new-trip-button" value=">"}}
