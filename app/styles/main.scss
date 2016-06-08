@@ -46,6 +46,12 @@ input[type="text"] {
 .highlight-button {
   background: $highlight-background;
   box-shadow: $button-box-shadow;
+  font-weight: 100;
+}
+
+.pill-button {
+  border-radius: 100px;
+  margin: $small-spacing;
 }
 
 .sm-circle {
