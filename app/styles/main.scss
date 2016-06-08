@@ -1,7 +1,26 @@
 body {
   background-color: $base-background-color;
+
+  .outer-container {
+    @include outer-container();
+  }
+
+  .row {
+    @include row();
+  }
 }
 
 .oto-subtitle-container {
-  margin: 0 auto;
+  @include span-columns(2);
+  @include shift(1);
+
+  @include media($tablet) {
+    @include span-columns(2);
+    @include shift(3);
+  }
+
+  @include media($desktop) {
+    @include span-columns(2);
+    @include shift(5);
+  }
 }
