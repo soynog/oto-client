@@ -8,7 +8,7 @@ body {
   background-position: center center; // xpos ypos
   background-repeat: no-repeat;
   background-size: cover;
-  
+
   .outer-container {
     @include outer-container();
   }
@@ -35,4 +35,8 @@ body {
     @include span-columns(2);
     @include shift(5);
   }
+}
+
+.welcome-greeting-container {
+  margin: $base-spacing * 6 0 $base-spacing * 4;
 }

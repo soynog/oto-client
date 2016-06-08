@@ -19,11 +19,21 @@ h6 {
   margin: 0 0 $small-spacing;
 }
 
+h1 {
+  // width: 135.7px;
+	// height: 33px;
+	// font-family: Avenir-Book;
+	// font-size: 24px;
+  font-size: modular-scale(4);
+	letter-spacing: 0.7px;
+	text-align: center;
+}
+
 h1.oto-logo {
   // width: 271.5px;
   // height: 100px;
   // font-family: SquareFont;
-  color: $heading-font-color;
+  // color: $heading-font-color;
   // font-size: 96px;
   font-size: modular-scale(8);
   font-weight: normal;
