@@ -15,6 +15,7 @@ body {
 
   .row {
     @include row();
+    text-align: center;
   }
 }
 
@@ -23,8 +24,9 @@ body {
 .oto-subtitle-container {
   @include span-columns(2);
   @include shift(1);
-  padding-left: $small-spacing;
   border-left: 2px solid $heading-font-color;
+  padding-left: $small-spacing;
+  text-align: left;
 
   @include media($tablet) {
     @include span-columns(2);
@@ -39,4 +41,18 @@ body {
 
 .welcome-greeting-container {
   margin: $base-spacing * 6 0 $base-spacing * 4;
+}
+
+.create-trip-button {
+  background-color: $highlight-button;
+  border-radius: 50%;
+  box-shadow: $button-box-shadow;
+  font-size: 70px;
+  font-weight: 100;
+  height: 67px;
+  line-height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 5px 0 0;
+  width: 67px;
 }

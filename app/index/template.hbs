@@ -30,6 +30,11 @@
   </div>
 </div>
 <p>You are not currently signed in</p>
-{{#link-to 'trips.new'}}<button>Create a New Trip</button>{{/link-to}}
-<button>Or Join a Trip</button>
+
+<div class="row">
+  {{#link-to 'trips.new'}}
+    <button class="create-trip-button">+</button>
+  {{/link-to}}
+  {{!-- <button>Or Join a Trip</button> --}}
+</div>
 {{outlet}}
