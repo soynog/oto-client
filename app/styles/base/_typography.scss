@@ -21,13 +21,25 @@ h6 {
 
 h1.oto-logo {
   // width: 271.5px;
-  height: 100px;
+  // height: 100px;
   // font-family: SquareFont;
-  font-size: 96px;
+  color: $heading-font-color;
+  // font-size: 96px;
+  font-size: modular-scale(8);
   font-weight: normal;
   letter-spacing: 2.7px;
   text-align: center;
-  color: $heading-font-color;
+  margin: $small-spacing / 2 0;
+}
+
+h4.oto-subtitle {
+	// width: 54.5px;
+	// height: 45px;
+	// font-family: Avenir-Light;
+	font-size: modular-scale(2);
+	line-height: 1.2;
+	letter-spacing: 0.2px;
+	color: $heading-font-color;
 }
 
 p {
