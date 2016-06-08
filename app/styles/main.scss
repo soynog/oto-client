@@ -10,9 +10,13 @@ body {
   }
 }
 
+
+// Welcome Page
 .oto-subtitle-container {
   @include span-columns(2);
   @include shift(1);
+  padding-left: $small-spacing;
+  border-left: 2px solid $heading-font-color;
 
   @include media($tablet) {
     @include span-columns(2);
