@@ -1,7 +1,9 @@
 <h2>User Homepage - Trips</h2>
 
-{{#each model as |trip index|}}
-  {{trip-summary trip=trip index=index class="trip-summary-container"}}
-{{/each}}
+<div class="trip-list-container">
+  {{#each model as |trip index|}}
+    {{trip-summary trip=trip index=index class="trip-summary-container"}}
+  {{/each}}
+</div>
 
 {{create-trip-button}}
