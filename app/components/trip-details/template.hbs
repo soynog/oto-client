@@ -20,7 +20,7 @@
     {{!-- Display # of Participants --}}
     <ul class="participants-list">
       {{#each trip.invitations as |invitation|}}
-        <li>{{invitation.userInit}}</li>
+        <li class="sm-circle user-icon">{{invitation.userInit}}</li>
       {{/each}}
     </ul>
     <button {{action "submit"}}>Submit Changes</button>

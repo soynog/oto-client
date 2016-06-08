@@ -21,3 +21,16 @@
     @include shift(2);
   }
 }
+
+.participants-list {
+  text-align: left;
+  
+  li {
+    border: $thin-border;
+    display: inline-block;
+    line-height: 0;
+    overflow: hidden;
+    padding: $base-font-size 0 0;
+    text-align: center;
+  }
+}

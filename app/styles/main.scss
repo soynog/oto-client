@@ -48,8 +48,22 @@ input[type="text"] {
   box-shadow: $button-box-shadow;
 }
 
-.circle {
-  // Make a circle mixin
+.sm-circle {
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+}
+
+.md-circle {
+  border-radius: 50%;
+  font-size: 70px;
+  font-weight: 100;
+  height: 67px;
+  line-height: 0;
+  margin: 0 0 $base-spacing;
+  overflow: hidden;
+  padding: 5px 0 0;
+  width: 67px;
 }
 
 .icon {
