@@ -1,3 +1,5 @@
+// GENERAL TYPOGRAPHY
+
 body {
   color: $base-font-color;
   font-family: $base-font-family;
@@ -16,35 +18,35 @@ h6 {
   font-weight: $heading-font-weight;
   font-size: modular-scale(1);
   line-height: $heading-line-height;
-  margin: 0 0 $small-spacing;
+  margin: 0;
+  // margin: 0;
 }
 
-h1.oto-logo {
-  // width: 271.5px;
-  // height: 100px;
-  // font-family: SquareFont;
-  color: $heading-font-color;
-  // font-size: 96px;
-  font-size: modular-scale(8);
-  font-weight: normal;
-  letter-spacing: 2.7px;
+h1 {
+  // width: 135.7px;
+	// height: 33px;
+	// font-family: Avenir-Book;
+	// font-size: 24px;
+  font-size: modular-scale(4);
+	letter-spacing: 0.7px;
+	text-align: center;
+}
+
+h2 {
+  font-size: modular-scale(3);
+  letter-spacing: 2px;
   text-align: center;
-  margin: $small-spacing / 2 0;
 }
 
-h4.oto-subtitle {
-	// width: 54.5px;
-	// height: 45px;
-	// font-family: Avenir-Light;
-	font-size: modular-scale(2);
-	line-height: 1.2;
-	letter-spacing: 0.2px;
-	color: $heading-font-color;
-  margin-bottom: 0;
-}
 
 p {
-  margin: 0 0 $small-spacing;
+  font-size: modular-scale(1);
+  margin: 0;
+}
+
+::placeholder {
+  font-size: modular-scale(-2);
+  letter-spacing: 2px;
 }
 
 a {
@@ -65,4 +67,65 @@ hr {
   border-right: 0;
   border-top: 0;
   margin: $base-spacing 0;
+}
+
+// COMPONENT-SPECIFIC TYPOGRAPHY
+
+
+// Welcome Page
+h1.oto-logo {
+  $oto-logo-scale-factor: .9;
+
+  font-family: 'Geo', sans-serif;
+  font-size: modular-scale(10);
+  font-weight: bold;
+  letter-spacing: -5px;
+  margin: $small-spacing / 2 0;
+  text-align: center;
+  transform: scale(1, $oto-logo-scale-factor);
+  // -webkit-transform: scale(1,$oto-logo-scale-factor); /* Safari and Chrome */
+  // -moz-transform: scale(1,$oto-logo-scale-factor); /* Firefox */
+  // -ms-transform: scale(1,$oto-logo-scale-factor); /* IE 9+ */
+  // -o-transform: scale(1,$oto-logo-scale-factor); /* Opera */
+}
+
+h4.oto-subtitle {
+  color: $heading-font-color;
+  font-size: modular-scale(2);
+	letter-spacing: .2px;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+// Modals
+h2.modal-header {
+  font-size: modular-scale(1);
+  font-weight: normal;
+}
+
+// p.modal-description {
+//   color: $subtle-font-color;
+// }
+
+.subtle-text {
+  color: $subtle-font-color;
+}
+
+.small-text {
+  font-size: modular-scale(-1);
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+// User Home Page
+h3.trip-summary-title {
+  font-weight: normal;
+  margin: $small-spacing / 2 0;
+}
+
+p.trip-summary-subtitle {
+  color: $subtle-font-color;
+  font-size: modular-scale(-1);
+  font-weight: normal;
+  margin: 0;
 }

@@ -1,38 +1,98 @@
+// Background and Layout
+html {
+  min-height: 100%;
+}
+
 body {
-  background: linear-gradient(
-      -137deg,
-      rgba($base-background-color, $background-opacity),
-      rgba($secondary-background-color, $background-opacity)
-    ),
-    $background-image-url;
+  background: $base-background;
   background-position: center center; // xpos ypos
   background-repeat: no-repeat;
   background-size: cover;
-  
+  margin: 0;
+  min-height: 100%;
+
   .outer-container {
     @include outer-container();
   }
 
   .row {
     @include row();
+    text-align: center;
   }
 }
 
+// Forms
+input[type="text"] {
+  background-color: rgba($base-background-color, 0);
+  border: 0;
+  border-bottom: $subtle-border;
+  border-radius: 0;
+  color: $base-font-color;
+  padding: $small-spacing / 2 $small-spacing $small-spacing * 1.5;
+}
 
-// Welcome Page
-.oto-subtitle-container {
-  @include span-columns(2);
-  @include shift(1);
-  padding-left: $small-spacing;
-  border-left: 2px solid $heading-font-color;
+// Buttons
+// button {
+//   @extend .highlight-button; // Default button is highlight-button
+// }
 
-  @include media($tablet) {
-    @include span-columns(2);
-    @include shift(3);
-  }
+.subtle-button {
+  background-color: rgba($base-background-color, 0);
+  color: $subtle-font-color;
+  font-size: modular-scale(1);
+  font-weight: normal;
+}
 
-  @include media($desktop) {
-    @include span-columns(2);
-    @include shift(5);
+.highlight-button {
+  background: $highlight-background;
+  box-shadow: $button-box-shadow;
+  font-weight: 100;
+}
+
+.danger-button {
+  background: rgba(red, 0.7);
+  box-shadow: $button-box-shadow;
+  font-weight: 100;
+}
+
+.pill-button {
+  border-radius: 100px;
+  margin: $small-spacing;
+}
+
+.sm-circle {
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+}
+
+.md-circle {
+  border-radius: 50%;
+  font-size: 70px;
+  font-weight: 100;
+  height: 67px;
+  line-height: 0;
+  margin: 0 0 $base-spacing;
+  overflow: hidden;
+  padding: 5px 0 0;
+  width: 67px;
+}
+
+.icon {
+  margin: 0 $small-spacing / 2;
+  font-size: modular-scale(1);
+}
+
+.footer-button-container {
+  bottom: 0;
+  left: 0;
+  padding: $small-spacing * 2;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+
+  div,
+  button {
+    display: inline-block;
   }
 }

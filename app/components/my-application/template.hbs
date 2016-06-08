@@ -30,12 +30,14 @@
   {{outlet}}
 </div>
 
-{{#if isAuthenticated}}
-  <button {{action "signOut"}}>Sign Out</button>
-{{else}}
-  {{sign-in-modal signIn="signIn"}}
-  {{sign-up-modal signUp="signUp"}}
-{{/if}}
+<div class=auth-button-container>
+  {{#if isAuthenticated}}
+    <button class="subtle-button" {{action "signOut"}}>Sign Out</button>
+  {{else}}
+    {{sign-in-modal signIn="signIn"}}
+    {{sign-up-modal signUp="signUp"}}
+  {{/if}}
+</div>
 
 
 

@@ -1,0 +1,44 @@
+
+.trip-list-container {
+  margin: $small-spacing 0 $base-spacing;
+}
+
+.create-trip-button-container {
+  padding-top: $base-spacing * 2;
+}
+
+.trip-summary-container {
+  // height: 100%;
+  padding: 0;
+  margin: 0;
+
+  @include span-columns(4 of 4);
+  @include shift(0);
+  @include omega();
+
+  @include media($tablet) {
+    @include span-columns(4 of 8);
+    @include shift(2);
+  }
+
+  @include media($desktop) {
+    @include span-columns(4 of 12);
+    @include shift(4);
+  }
+
+  .trip-summary-button {
+    border-radius: 0;
+    box-shadow: inset 0 20px 20px rgba($black, 0.2);
+    // height: 80px;
+    height: $base-spacing * 3.5;
+    // margin: $small-spacing / 4 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.trip-summary-container:first-child .trip-summary-button {
+  box-shadow: none;
+}

@@ -1,6 +1,6 @@
-{{#link-to 'trip' trip tagName="button" }}
-  <h3>{{trip.name}}</h3>
-  <p>Location: {{trip.location}}</p>
-  <p>Dates: {{trip.startDate}} to {{trip.endDate}}</p>
-  <p>Owner: {{trip.user}}</p>
+{{#link-to 'trip' trip tagName="button" class="highlight-button trip-summary-button"}}
+  <div class="trip-summary-info-container">
+    <h3 class="trip-summary-title">{{trip.name}}</h3>
+    <p class="trip-summary-subtitle subtle-text small-text">{{trip.location}}</p>
+  </div>
 {{/link-to}}

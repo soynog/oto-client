@@ -1,19 +1,26 @@
-<button {{action "toggleModal"}}>Sign In</button>
+<button class="subtle-button" {{action "toggleModal"}}>sign in<span class="icon ion-person"></span></button>
 
 {{#if isShowingModal}}
   {{#modal-dialog close="toggleModal"
-                  targetAttachment="center"
                   translucentOverlay=true
-                  clickOutsideToClose=true}}
+                  clickOutsideToClose=false
+                  containerClassNames="oto-modal-container row"
+                  overlay-class=""
+                  wrapper-class="outer-container"}}
+    <h2 class="modal-header">GOOD JOB! ALMOST THERE!</h2>
+    <p class="subtle-text"> Please enter your user info so your friends can know who you are. </p>
+
     {{email-input email=credentials.email}}
     {{password-input password=credentials.password}}
 
-    <button type="submit" class="btn btn-primary" {{action "signIn"}}>
-      Sign In
-    </button>
+    <div class="footer-button-container">
+      <button class="subtle-button auth-cancel-button cancel-button" {{action "toggleModal"}}>
+        Back
+      </button>
+      <button type="submit" class="highlight-button circle auth-submit-button submit-button" {{action "signIn"}}>
+        OK
+      </button>
+    </div>
 
-    <button class="btn btn-default" {{action "toggleModal"}}>
-      Cancel
-    </button>
   {{/modal-dialog}}
 {{/if}}

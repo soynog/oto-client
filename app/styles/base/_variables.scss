@@ -55,19 +55,35 @@ $apple-green: #7ed321;
 // Font Colors
 $base-font-color: $white;
 $heading-font-color: $base-font-color;
+$subtle-font-color: rgba($base-font-color, 0.5);
 $action-color: $blue;
 
 // Border
-$base-border-color: $light-gray;
-$base-border: 1px solid $base-border-color;
+$base-border-color: $base-font-color;
+$subtle-border: 2px solid rgba($base-border-color, 0.2);
+$base-border: 2px solid $base-border-color;
+$thin-border: 1px solid $base-border-color;
 
 // Background Colors & Styling
 $base-background-color: $dark-blue;
 $secondary-background-color: $black;
+$highlight-background-color: $apple-green;
 $background-opacity: 0.8;
 $background-image-url: url('http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/09/mountain-lake_HD-Wallpapers.jpg');
+$base-background: linear-gradient(
+    -137deg,
+    rgba($base-background-color, $background-opacity),
+    rgba($secondary-background-color, $background-opacity)
+  ),
+  $background-image-url;
+$highlight-background: rgba($highlight-background-color, 0.7);
 
-// Forms
+// Forms & Buttons
+$button-box-shadow:
+  0 7px 7px 0 rgba($black, 0.25),
+  0 0 7px 0 rgba($black, 0.12);
+$highlight-button: rgba($highlight-background-color, 0.7);
+
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
 

@@ -1,13 +1,13 @@
 <form {{action "submit" form on="submit" }}>
-  {{input placeholder="Name"
+  {{input placeholder="NAME"
           value=form.name}}
-  {{input placeholder="Location"
+  {{input placeholder="LOCATION"
           value=form.location}}
-  {{input placeholder="Start Date"
+  {{input placeholder="START DATE"
           value=form.startDate}}
-  {{input placeholder="End Date"
+  {{input placeholder="END DATE"
           value=form.endDate}}
-  {{input placeholder="Description"
+  {{input placeholder="DESCRIPTION"
           value=form.description}}
-  {{input type="submit"}}
+  {{input type="submit" class="highlight-button circle submit-new-trip-button" value=">"}}
 </form>
