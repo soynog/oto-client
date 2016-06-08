@@ -56,3 +56,11 @@ body {
   padding: 5px 0 0;
   width: 67px;
 }
+
+// User Auth Buttons
+.subtle-button {
+  background-color: rgba($base-background-color, 0);
+  font-weight: normal;
+  font-size: modular-scale(1);
+  color: $subtle-font-color;
+}
