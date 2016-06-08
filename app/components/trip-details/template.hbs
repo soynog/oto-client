@@ -1,25 +1,27 @@
-{{#if isAuthenticated}}<h4>Current User: {{user}}</h4>{{/if}}
-<h3>
-  <span class="trip-name" contenteditable>{{trip.name}}</span>
-  {{!-- <button {{action "toggleEditable">Edit</button> --}}
-</h3>
-<p>Location:
-  <span class="trip-location" contenteditable>{{trip.location}}</span>
-  {{!-- <button>Edit</button> --}}
-</p>
-<p>
-  Dates: {{trip.startDate}} to {{trip.endDate}}
-  {{!-- <button>Edit</button> --}}
-</p>
-<p>Description:
-  <span class="trip-description" contenteditable>{{trip.description}}</span>
-</p>
-<button {{action "submit"}}>Submit Changes</button>
-<button {{action "deleteTrip"}} class="btn btn-danger">Delete Trip</button>
-<h4>Invitations</h4>
-<ul>
-  {{#each trip.invitations as |invitation|}}
-    <li>{{invitation.user.email}}, {{invitation.status}}</li>
-  {{/each}}
-</ul>
-<button {{action "joinTrip"}}>Join Trip</button>
+{{!-- {{#if isAuthenticated}}<h4>Current User: {{user}}</h4>{{/if}} --}}
+
+<div class="trip-details-header">
+  <h2>
+    <span class="trip-name" contenteditable>{{trip.name}}</span>
+  </h2>
+  <p class="subtle-text small-text">
+    {{trip.startDate}}{{trip.endDate}}
+  </p>
+  <p>
+    location: <span class="trip-location" contenteditable>{{trip.location}}</span>
+  </p>
+</div>
+<div>
+  <p>Description:
+    <span class="trip-description" contenteditable>{{trip.description}}</span>
+  </p>
+  <button {{action "submit"}}>Submit Changes</button>
+  <button {{action "deleteTrip"}} class="btn btn-danger">Delete Trip</button>
+  <h4>Invitations</h4>
+  <ul>
+    {{#each trip.invitations as |invitation|}}
+      <li>{{invitation.user.email}}, {{invitation.status}}</li>
+    {{/each}}
+  </ul>
+  <button {{action "joinTrip"}}>Join Trip</button>
+</div>

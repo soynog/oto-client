@@ -75,6 +75,7 @@ $base-background: linear-gradient(
     rgba($secondary-background-color, $background-opacity)
   ),
   $background-image-url;
+$highlight-background: rgba($highlight-background-color, 0.7);
 
 // Forms & Buttons
 $button-box-shadow:
