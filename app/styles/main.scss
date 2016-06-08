@@ -75,3 +75,8 @@ body {
     padding: $small-spacing / 2 $small-spacing / 2;
   }
 }
+
+.icon {
+  margin: 0 $small-spacing / 2;
+  font-size: modular-scale(1);
+}
