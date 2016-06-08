@@ -51,25 +51,12 @@
   width: 38px;
 }
 
-.footer-button-container {
-  bottom: 0;
-  left: 0;
-  padding: $small-spacing * 2;
-  position: fixed;
-  width: 100%;
+.submit-button {
+  float: right;
+  padding: $small-spacing / 2 $small-spacing / 2;
+}
 
-  .submit-button {
-    float: right;
-    // right: 0;
-  }
-
-  .cancel-button {
-    float: left;
-  }
-
-  div,
-  button {
-    display: inline-block;
-    padding: $small-spacing / 2 $small-spacing / 2;
-  }
+.cancel-button {
+  float: left;
+  padding: $small-spacing / 2 $small-spacing / 2;
 }

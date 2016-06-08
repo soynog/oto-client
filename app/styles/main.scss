@@ -49,6 +49,12 @@ input[type="text"] {
   font-weight: 100;
 }
 
+.danger-button {
+  background: rgba(red, 0.7);
+  box-shadow: $button-box-shadow;
+  font-weight: 100;
+}
+
 .pill-button {
   border-radius: 100px;
   margin: $small-spacing;
@@ -75,4 +81,18 @@ input[type="text"] {
 .icon {
   margin: 0 $small-spacing / 2;
   font-size: modular-scale(1);
+}
+
+.footer-button-container {
+  bottom: 0;
+  left: 0;
+  padding: $small-spacing * 2;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+
+  div,
+  button {
+    display: inline-block;
+  }
 }
