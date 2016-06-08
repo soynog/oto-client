@@ -61,9 +61,11 @@ $action-color: $blue;
 $base-border-color: $light-gray;
 $base-border: 1px solid $base-border-color;
 
-// Background Colors
+// Background Colors & Styling
 $base-background-color: $dark-blue;
-$secondary-background-color: tint($base-border-color, 75%);
+$secondary-background-color: $black;
+$background-opacity: 0.8;
+$background-image-url: url('http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/09/mountain-lake_HD-Wallpapers.jpg');
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);

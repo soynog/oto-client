@@ -1,6 +1,14 @@
 body {
-  background-color: $base-background-color;
-
+  background: linear-gradient(
+      -137deg,
+      rgba($base-background-color, $background-opacity),
+      rgba($secondary-background-color, $background-opacity)
+    ),
+    $background-image-url;
+  background-position: center center; // xpos ypos
+  background-repeat: no-repeat;
+  background-size: cover;
+  
   .outer-container {
     @include outer-container();
   }
