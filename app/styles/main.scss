@@ -15,6 +15,7 @@ body {
   }
 }
 
+// Forms
 input[type="text"] {
   background-color: rgba($base-background-color, 0);
   border: 0;
@@ -22,6 +23,10 @@ input[type="text"] {
   border-radius: 0;
   color: $base-font-color;
   padding: $small-spacing / 2 $small-spacing $small-spacing * 1.5;
+}
+
+input[type="submit"] {
+
 }
 
 // Buttons

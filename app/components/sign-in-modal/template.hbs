@@ -13,11 +13,11 @@
     {{email-input email=credentials.email}}
     {{password-input password=credentials.password}}
 
-    <div class="modal-button-container">
-      <button class="subtle-button auth-cancel-button" {{action "toggleModal"}}>
+    <div class="footer-button-container">
+      <button class="subtle-button auth-cancel-button cancel-button" {{action "toggleModal"}}>
         Back
       </button>
-      <button type="submit" class="highlight-button circle auth-submit-button" {{action "signIn"}}>
+      <button type="submit" class="highlight-button circle auth-submit-button submit-button" {{action "signIn"}}>
         OK
       </button>
     </div>

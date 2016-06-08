@@ -51,19 +51,19 @@
   width: 38px;
 }
 
-.modal-button-container {
+.footer-button-container {
   bottom: 0;
   left: 0;
   padding: $small-spacing * 2;
   position: fixed;
   width: 100%;
 
-  .auth-submit-button {
+  .submit-button {
     float: right;
     // right: 0;
   }
 
-  .auth-cancel-button {
+  .cancel-button {
     float: left;
   }
 
@@ -72,4 +72,19 @@
     display: inline-block;
     padding: $small-spacing / 2 $small-spacing / 2;
   }
+}
+
+
+// New Trip Form
+.submit-new-trip-button {
+  border-radius: 50%;
+  float:right;
+  font-size: 30px;
+  font-weight: 100;
+  height: 38px;
+  line-height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 2px 0 0;
+  width: 38px;
 }
