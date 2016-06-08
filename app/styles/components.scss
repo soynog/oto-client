@@ -1,12 +1,33 @@
 // Modals
 .ember-modal-overlay {
-
+  padding: 0;
+  margin: 0;
+  background-color: red;
 }
 
 .ember-modal-dialog {
-
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: rgba($base-background-color, 0);
+  box-shadow: none;
 }
 
 .ember-text-field {
-  
+
+}
+
+.oto-modal-container {
+  @include span-columns(2 of 4);
+  @include shift(1);
+
+  @include media($tablet) {
+    @include span-columns(4 of 8);
+    @include shift(2);
+  }
+
+  @include media($desktop) {
+    @include span-columns(4 of 12);
+    @include shift(4);
+  }
 }

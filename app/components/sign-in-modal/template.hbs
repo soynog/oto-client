@@ -2,9 +2,11 @@
 
 {{#if isShowingModal}}
   {{#modal-dialog close="toggleModal"
-                  targetAttachment="center"
                   translucentOverlay=true
-                  clickOutsideToClose=true}}
+                  clickOutsideToClose=false
+                  containerClassNames="oto-modal-container row"
+                  overlay-class=""
+                  wrapper-class="outer-container"}}
     {{email-input email=credentials.email}}
     {{password-input password=credentials.password}}
 
