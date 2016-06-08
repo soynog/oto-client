@@ -21,6 +21,9 @@
 }
 
 .oto-modal-container {
+  height: 100%;
+  padding: $small-spacing * 2;
+
   @include span-columns(4 of 4);
   @include shift(0);
 
@@ -46,4 +49,27 @@
   overflow: hidden;
   padding: 0;
   width: 38px;
+}
+
+.modal-button-container {
+  bottom: 0;
+  left: 0;
+  padding: $small-spacing * 2;
+  position: fixed;
+  width: 100%;
+
+  .auth-submit-button {
+    float: right;
+    // right: 0;
+  }
+
+  .auth-cancel-button {
+    float: left;
+  }
+
+  div,
+  button {
+    display: inline-block;
+    padding: $small-spacing / 2 $small-spacing / 2;
+  }
 }

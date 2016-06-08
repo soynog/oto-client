@@ -10,13 +10,14 @@
     {{email-input email=credentials.email}}
     {{password-input password=credentials.password}}
 
-    <button class="subtle-button auth-cancel-button" {{action "toggleModal"}}>
-      Back
-    </button>
-
-    <button type="submit" class="highlight-button circle auth-submit-button" {{action "signIn"}}>
-      OK
-    </button>
+    <div class="modal-button-container">
+      <button class="subtle-button auth-cancel-button" {{action "toggleModal"}}>
+        Back
+      </button>
+      <button type="submit" class="highlight-button circle auth-submit-button" {{action "signIn"}}>
+        OK
+      </button>
+    </div>
 
   {{/modal-dialog}}
 {{/if}}
