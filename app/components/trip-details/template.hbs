@@ -16,14 +16,16 @@
     <p class="small-text">
       <span class="trip-description" contenteditable>{{trip.description}}</span>
     </p>
-    <button {{action "submit"}}>Submit Changes</button>
-    <button {{action "deleteTrip"}} class="btn btn-danger">Delete Trip</button>
-    <h4>Invitations</h4>
-    <ul>
+    <h4>Participants</h4>
+    {{!-- Display # of Participants --}}
+    <ul class="participants-list">
       {{#each trip.invitations as |invitation|}}
-        <li>{{invitation.user.email}}, {{invitation.status}}</li>
+        <li>{{invitation.userInit}}</li>
       {{/each}}
     </ul>
+    <button {{action "submit"}}>Submit Changes</button>
+    <button {{action "deleteTrip"}} class="btn btn-danger">Delete Trip</button>
+
     <button {{action "joinTrip"}}>Join Trip</button>
   </div>
 </div>
