@@ -21,8 +21,8 @@
 }
 
 .oto-modal-container {
-  @include span-columns(2 of 4);
-  @include shift(1);
+  @include span-columns(4 of 4);
+  @include shift(0);
 
   @include media($tablet) {
     @include span-columns(4 of 8);
@@ -33,4 +33,17 @@
     @include span-columns(4 of 12);
     @include shift(4);
   }
+}
+
+// Sign In Modal
+.auth-submit-button {
+  border-radius: 50%;
+  font-size: modular-scale(0);
+  font-weight: normal;
+  height: 38px;
+  line-height: 0;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 38px;
 }

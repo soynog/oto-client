@@ -10,12 +10,13 @@
     {{email-input email=credentials.email}}
     {{password-input password=credentials.password}}
 
-    <button type="submit" class="btn btn-primary" {{action "signIn"}}>
-      Sign In
+    <button class="subtle-button auth-cancel-button" {{action "toggleModal"}}>
+      Back
     </button>
 
-    <button class="btn btn-default" {{action "toggleModal"}}>
-      Cancel
+    <button type="submit" class="highlight-button circle auth-submit-button" {{action "signIn"}}>
+      OK
     </button>
+
   {{/modal-dialog}}
 {{/if}}

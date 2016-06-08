@@ -1,3 +1,4 @@
+// Background and Layout
 body {
   background: $base-background;
   background-position: center center; // xpos ypos
@@ -14,6 +15,22 @@ body {
   }
 }
 
+// Buttons
+.subtle-button {
+  background-color: rgba($base-background-color, 0);
+  color: $subtle-font-color;
+  font-size: modular-scale(1);
+  font-weight: normal;
+}
+
+.highlight-button {
+  background-color: $highlight-button;
+  box-shadow: $button-box-shadow;
+}
+
+.circle {
+  // Make a circle mixin
+}
 
 // Welcome Page
 .oto-subtitle-container {
@@ -39,9 +56,7 @@ body {
 }
 
 .create-trip-button {
-  background-color: $highlight-button;
   border-radius: 50%;
-  box-shadow: $button-box-shadow;
   font-size: 70px;
   font-weight: 100;
   height: 67px;
@@ -53,13 +68,6 @@ body {
 }
 
 // User Auth Buttons
-.subtle-button {
-  background-color: rgba($base-background-color, 0);
-  color: $subtle-font-color;
-  font-size: modular-scale(1);
-  font-weight: normal;
-}
-
 .auth-button-container {
   margin: $base-spacing 0 0;
   text-align: right;
