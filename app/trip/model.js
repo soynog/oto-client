@@ -3,7 +3,7 @@ import Ember from 'ember';
 import attr from 'ember-data/attr';
 import { hasMany } from 'ember-data/relationships';
 import { belongsTo } from 'ember-data/relationships';
-// import 'moment';
+// const moment = require('moment');
 
 export default Model.extend({
   name: attr('string'),

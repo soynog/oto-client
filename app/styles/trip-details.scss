@@ -25,6 +25,7 @@
 
 .trip-description {
   margin: $small-spacing 0;
+  min-height: $base-spacing; // So that span doesn't disappear
 }
 
 .participants-list-header {
