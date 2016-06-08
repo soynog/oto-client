@@ -15,6 +15,13 @@ body {
   }
 }
 
+input[type="text"] {
+  background-color: rgba($base-background-color, 0);
+  border: 0;
+  border-bottom: $subtle-border;
+
+}
+
 // Buttons
 .subtle-button {
   background-color: rgba($base-background-color, 0);

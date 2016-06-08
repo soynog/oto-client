@@ -59,8 +59,9 @@ $subtle-font-color: rgba($base-font-color, 0.5);
 $action-color: $blue;
 
 // Border
-$base-border-color: $light-gray;
-$base-border: 1px solid $base-border-color;
+$base-border-color: $base-font-color;
+$subtle-border: 2px solid rgba($base-border-color, 0.2);
+$base-border: 2px solid $base-border-color;
 
 // Background Colors & Styling
 $base-background-color: $dark-blue;
