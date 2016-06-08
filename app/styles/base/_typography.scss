@@ -30,16 +30,18 @@ h1 {
 }
 
 h1.oto-logo {
-  // width: 271.5px;
-  // height: 100px;
-  // font-family: SquareFont;
-  // color: $heading-font-color;
-  // font-size: 96px;
-  font-size: modular-scale(8);
-  font-weight: normal;
-  letter-spacing: 2.7px;
+  font-family: 'Geo', sans-serif;
+  font-size: modular-scale(10);
+  font-weight: bold;
+  letter-spacing: -5px;
   text-align: center;
   margin: $small-spacing / 2 0;
+  $oto-logo-scale-factor: 0.9;
+  transform : scale(1,$oto-logo-scale-factor);
+  -webkit-transform:scale(1,$oto-logo-scale-factor); /* Safari and Chrome */
+  -moz-transform:scale(1,$oto-logo-scale-factor); /* Firefox */
+  -ms-transform:scale(1,$oto-logo-scale-factor); /* IE 9+ */
+  -o-transform:scale(1,$oto-logo-scale-factor); /* Opera */
 }
 
 h4.oto-subtitle {
