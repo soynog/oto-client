@@ -11,17 +11,19 @@
     <span class="trip-location" contenteditable>{{trip.location}}</span>
   </p>
 </div>
-<div>
-  <p>Description:
-    <span class="trip-description" contenteditable>{{trip.description}}</span>
-  </p>
-  <button {{action "submit"}}>Submit Changes</button>
-  <button {{action "deleteTrip"}} class="btn btn-danger">Delete Trip</button>
-  <h4>Invitations</h4>
-  <ul>
-    {{#each trip.invitations as |invitation|}}
-      <li>{{invitation.user.email}}, {{invitation.status}}</li>
-    {{/each}}
-  </ul>
-  <button {{action "joinTrip"}}>Join Trip</button>
+<div class="row">
+  <div class="trip-details-body">
+    <p class="small-text">
+      <span class="trip-description" contenteditable>{{trip.description}}</span>
+    </p>
+    <button {{action "submit"}}>Submit Changes</button>
+    <button {{action "deleteTrip"}} class="btn btn-danger">Delete Trip</button>
+    <h4>Invitations</h4>
+    <ul>
+      {{#each trip.invitations as |invitation|}}
+        <li>{{invitation.user.email}}, {{invitation.status}}</li>
+      {{/each}}
+    </ul>
+    <button {{action "joinTrip"}}>Join Trip</button>
+  </div>
 </div>
