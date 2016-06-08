@@ -20,5 +20,8 @@
 // For general layout an styling
 @import "main";
 
-// For component-specific styling
-@import "components";
+// For component- and route-specific styling
+@import "modals";
+@import "welcome";
+@import "create-trip";
+@import "user-home";
