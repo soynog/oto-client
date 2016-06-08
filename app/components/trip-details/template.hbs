@@ -13,10 +13,10 @@
 </div>
 <div class="row">
   <div class="trip-details-body">
-    <p class="small-text">
-      <span class="trip-description" contenteditable>{{trip.description}}</span>
+    <p class="small-text trip-description">
+      <span class="" contenteditable>{{trip.description}}</span>
     </p>
-    <h4>Participants</h4>
+    <h4 class="partipants-list-header">Participants</h4>
     {{!-- Display # of Participants --}}
     <ul class="participants-list">
       {{#each trip.invitations as |invitation|}}

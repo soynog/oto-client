@@ -7,6 +7,7 @@
 
 .trip-details-body {
   padding: $small-spacing;
+  text-align: left;
 
   @include span-columns(4 of 4);
   @include shift(0);
@@ -22,9 +23,18 @@
   }
 }
 
+.trip-description {
+  margin: $small-spacing 0;
+}
+
+.participants-list-header {
+  margin: $small-spacing 0;
+}
+
 .participants-list {
-  text-align: left;
-  
+  margin: $small-spacing / 2 0;
+  // text-align: left;
+
   li {
     border: $thin-border;
     display: inline-block;
