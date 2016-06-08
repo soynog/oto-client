@@ -61,13 +61,6 @@ export default Ember.Route.extend({
         this.get('flashMessages')
         .warning('Sorry, something went wrong. Have you already joined this trip?');
       });
-      // let data = {
-      //   status: "going",
-      //   trip: trip,
-      //   user:
-      // }
-      // let invitation = this.get('store').createRecord('invitation', data);
-      // invitation.save()
     }
   }
 });

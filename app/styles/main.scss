@@ -1,0 +1,38 @@
+body {
+  background: linear-gradient(
+      -137deg,
+      rgba($base-background-color, $background-opacity),
+      rgba($secondary-background-color, $background-opacity)
+    ),
+    $background-image-url;
+  background-position: center center; // xpos ypos
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  .outer-container {
+    @include outer-container();
+  }
+
+  .row {
+    @include row();
+  }
+}
+
+
+// Welcome Page
+.oto-subtitle-container {
+  @include span-columns(2);
+  @include shift(1);
+  padding-left: $small-spacing;
+  border-left: 2px solid $heading-font-color;
+
+  @include media($tablet) {
+    @include span-columns(2);
+    @include shift(3);
+  }
+
+  @include media($desktop) {
+    @include span-columns(2);
+    @include shift(5);
+  }
+}

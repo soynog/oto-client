@@ -1,0 +1,76 @@
+// Breakpoints
+$medium-screen: 600px;
+$large-screen: 900px;
+
+// Typography
+// Font Stack
+$font-stack-oto: (
+  "Lato",
+  "Nunito",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  "Roboto",
+  "Oxygen",
+  "Ubuntu",
+  "Cantarell",
+  "Fira Sans",
+  "Droid Sans",
+  "Helvetica Neue",
+  sans-serif,
+);
+$base-font-family: $font-stack-oto;
+$heading-font-family: $base-font-family;
+
+// Font Sizes
+$base-font-weight: 300;
+$heading-font-weight: $base-font-weight;
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+
+// Default Colors
+$blue: #1565c0;
+$dark-gray: #333;
+$medium-gray: #999;
+$light-gray: #ddd;
+
+// OTO Color Scheme
+$black: #000000;
+$dark-blue: #0e0096;
+$white: #ffffff;
+$apple-green: #7ed321;
+
+
+// Font Colors
+$base-font-color: $white;
+$heading-font-color: $base-font-color;
+$action-color: $blue;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors & Styling
+$base-background-color: $dark-blue;
+$secondary-background-color: $black;
+$background-opacity: 0.8;
+$background-image-url: url('http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/09/mountain-lake_HD-Wallpapers.jpg');
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
