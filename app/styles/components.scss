@@ -2,7 +2,10 @@
 .ember-modal-overlay {
   padding: 0;
   margin: 0;
-  background-color: red;
+  background: $base-background;
+  background-position: center center; // xpos ypos
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .ember-modal-dialog {

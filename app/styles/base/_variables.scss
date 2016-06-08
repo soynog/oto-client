@@ -68,6 +68,12 @@ $secondary-background-color: $black;
 $highlight-background-color: $apple-green;
 $background-opacity: 0.8;
 $background-image-url: url('http://hdwallpaperbackgrounds.net/wp-content/uploads/2015/09/mountain-lake_HD-Wallpapers.jpg');
+$base-background: linear-gradient(
+    -137deg,
+    rgba($base-background-color, $background-opacity),
+    rgba($secondary-background-color, $background-opacity)
+  ),
+  $background-image-url;
 
 // Forms & Buttons
 $button-box-shadow:
