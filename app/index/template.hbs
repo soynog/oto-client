@@ -31,11 +31,6 @@
   </div>
 </div> --}}
 
-<div class="row">
-  <p>Create a new trip</p>
-  {{#link-to 'trips.new'}}
-    <button class="create-trip-button highlight-button circle">+</button>
-  {{/link-to}}
-  {{!-- <button>Or Join a Trip</button> --}}
-</div>
+{{create-trip-button}}
+
 {{outlet}}
