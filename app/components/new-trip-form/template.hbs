@@ -1,10 +1,10 @@
 <form {{action "submit" form on="submit" }}>
-  {{input placeholder="NAME"
+  {{input placeholder="TRIP NAME"
           value=form.name}}
   {{input placeholder="LOCATION"
           value=form.location}}
-  {{date-picker date=form.startDate valueFormat='ll'}}
-  {{date-picker date=form.endDate valueFormat='ll'}}
+  {{date-picker placeholder="START DATE" allowBlank=true date=form.startDate valueFormat='ll'}}
+  {{date-picker placeholder="END DATE" allowBlank=true date=form.endDate valueFormat='ll'}}
   {{input placeholder="DESCRIPTION"
           value=form.description}}
   {{input type="submit" class="highlight-button circle submit-new-trip-button" value=">"}}
