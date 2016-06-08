@@ -44,6 +44,15 @@ h1.oto-logo {
   -o-transform:scale(1,$oto-logo-scale-factor); /* Opera */
 }
 
+h2.modal-header {
+  font-size: modular-scale(1);
+  font-weight: normal;
+}
+
+p.modal-description {
+  color: $subtle-font-color;
+}
+
 h4.oto-subtitle {
 	// width: 54.5px;
 	// height: 45px;
