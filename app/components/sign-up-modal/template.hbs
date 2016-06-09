@@ -6,24 +6,24 @@
                   translucentOverlay=true
                   clickOutsideToClose=true}}
     {{email-input email=credentials.email}}
-    <label for="email">Name</label>
     {{input type="text"
             id="first-name"
-            placeholder="First Name"
+            placeholder="FIRST NAME"
             value=credentials.firstName}}
     {{input type="text"
             id="last-name"
-            placeholder="Last Name"
+            placeholder="LAST NAME"
             value=credentials.lastName}}
     {{password-input password=credentials.password}}
     {{password-confirmation-input password=credentials.passwordConfirmation}}
 
-    <button type="submit" class="btn btn-primary" {{action "signUp"}}>
-      Sign Up
-    </button>
-
-    <button class="btn btn-default" {{action "toggleModal"}}>
-      Cancel
-    </button>
+    <div class="footer-button-container">
+      <button class="subtle-button auth-cancel-button cancel-button" {{action "toggleModal"}}>
+        back
+      </button>
+      <button type="submit" class="highlight-button circle auth-submit-button submit-button" {{action "signUp"}}>
+        OK
+      </button>
+    </div>
   {{/modal-dialog}}
 {{/if}}
