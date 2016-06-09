@@ -40,7 +40,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/ember-deployment-example/';
+    ENV.baseURL = 'https://oto-api.herokuapp.com';
     ENV.locationType = 'hash';
   }
 
