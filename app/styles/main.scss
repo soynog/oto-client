@@ -79,6 +79,12 @@ a {
   background: rgba(red, 0.7);
   box-shadow: $button-box-shadow;
   font-weight: 100;
+  &:focus,
+  &:hover {
+    background-color: rgba(red, 0.85);
+    color: $base-font-color;
+    outline: none;
+  }
 }
 
 .pill-button {
