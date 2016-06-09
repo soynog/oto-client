@@ -35,15 +35,26 @@
 
 // User Auth Buttons
 .auth-button-container {
-  position: fixed;
-  bottom: 0;
-  margin: $base-spacing 0 0;
-  width: 100%;
+  padding-bottom: 0;
 
-  div,
+  .home-button {
+    float: left;
+    margin: 0;
+    padding-bottom: $small-spacing / 2;
+  }
+
+  .sign-in-button {
+    margin: 0;
+  }
+
+  .sign-up-button {
+    margin: 0;
+  }
+
   button {
-    display: inline-block;
-    padding: $small-spacing / 2 $small-spacing / 2;
+    padding-left: $small-spacing / 2;
+    padding-right: $small-spacing / 2;
     float: right;
+    height: $base-spacing * 2;
   }
 }

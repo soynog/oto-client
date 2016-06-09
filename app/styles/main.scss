@@ -91,12 +91,11 @@ input[type="text"] {
 .footer-button-container {
   bottom: 0;
   left: 0;
-  padding: $small-spacing * 2;
+  padding: $small-spacing;
   position: fixed;
   width: 100%;
   text-align: center;
 
-  div,
   button {
     display: inline-block;
   }
