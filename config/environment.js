@@ -41,7 +41,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = 'https://oto-api.herokuapp.com';
+    ENV.baseURL = '/';
     ENV.locationType = 'hash';
   }
 
