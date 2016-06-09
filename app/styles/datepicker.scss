@@ -1,0 +1,63 @@
+.pika-single {
+  background: $base-background;
+
+  div {
+    background: rgba($base-background-color, 0);
+  }
+
+  .pika-label {
+    font-family: $base-font-family;
+    color: $base-font-color;
+  }
+
+  .pika-title {
+    select {
+      // opacity: 1;
+      // background: rgba($base-background-color, 0);
+      // color: $base-font-color;
+      // option.selected {
+      //   // color: $base-background-color;
+      // }
+    }
+
+    button {
+      background-color: $highlight-background-color;
+      color: rgba($base-font-color, 0);
+      box-shadow: $button-box-shadow;
+      font-weight: 100;
+    }
+  }
+
+
+  table.pika-table {
+    th {
+      color: $subtle-font-color;
+      font-family: $base-font-family;
+      font-size: modular-scale(-1);
+      font-weight: normal;
+    }
+
+    td {
+      border: 0;
+    }
+
+    td.is-selected {
+
+      button {
+        color: $action-color;
+        box-shadow: none;
+      }
+    }
+
+    button {
+      background-color: rgba($base-background-color, 0);
+      color: $subtle-font-color;
+      border-radius: 0;
+      font-family: $base-font-family;
+      font-size: modular-scale(-1);
+      font-weight: normal;
+      padding: $small-spacing 0;
+      text-align: center;
+    }
+  }
+}
