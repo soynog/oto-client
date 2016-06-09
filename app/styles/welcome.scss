@@ -35,8 +35,13 @@
 
 // User Auth Buttons
 .auth-button-container {
+  .home-button {
+    float: left;
+  }
+
   div,
   button {
     padding: $small-spacing / 2 $small-spacing / 2;
+    float: right;
   }
 }

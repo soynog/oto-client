@@ -49,3 +49,10 @@
 .trip-action-button-container {
   text-align: center;
 }
+
+.trip-footer-button-container {
+  button {
+    float: left;
+    padding: $small-spacing *0.75 $small-spacing;
+  }
+}

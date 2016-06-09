@@ -59,5 +59,9 @@ export default Ember.Route.extend({
         .danger('There was a problem. Please try again.');
       });
     },
+
+    home () {
+      this.transitionTo('application');
+    }
   },
 });
