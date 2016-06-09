@@ -16,7 +16,7 @@ export default Model.extend({
     return Math.round((this.get('endDate') - this.get('startDate'))/(1000 * 60 * 60 * 24));
   }),
   url: Ember.computed('id', function() {
-    return `http://localhost:4200/trips/${this.get('id')}`;
+    return `http://soynog.github.io/oto-client/trips/${this.get('id')}`;
   }),
   // invitations: attr(),
   // users: hasMany('user')
