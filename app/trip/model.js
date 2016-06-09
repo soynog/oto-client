@@ -18,6 +18,9 @@ export default Model.extend({
   url: Ember.computed('id', function() {
     return `http://soynog.github.io/oto-client/trips/${this.get('id')}`;
   }),
+  isInvited (userId) {
+    return this.get('invitations').any((inv) => inv.get('user.id') === userId.toString());
+  }
   // invitations: attr(),
   // users: hasMany('user')
 });
