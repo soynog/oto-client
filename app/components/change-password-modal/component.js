@@ -1,12 +1,12 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  credentials: {},
+  passwords: {},
   isShowingModal: false,
 
   actions: {
-    signIn () {
-      this.sendAction('signIn', this.get('credentials'));
+    changePW () {
+      this.sendAction('changePW', this.get('passwords'));
       this.toggleProperty('isShowingModal');
     },
     toggleModal () {

@@ -60,6 +60,18 @@ export default Ember.Route.extend({
       });
     },
 
+    changePW (passwords) {
+      this.get('auth').changePassword(passwords)
+      .then(() => {
+        this.get('flashMessages')
+        .success('Successfully changed your password!');
+      })
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There was a problem. Please try again.');
+      });
+    },
+
     home () {
       this.transitionTo('application');
     }
