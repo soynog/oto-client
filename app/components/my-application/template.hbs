@@ -31,12 +31,12 @@
 </div>
 
 <div class="footer-button-container auth-button-container">
+    <div class="home-button">
+      <button class="subtle-button home-button" {{action "home"}}>home</button>
+    </div>
   {{#if isAuthenticated}}
     <div>
       <button class="subtle-button sign-out-button" {{action "signOut"}}>sign out</button>
-    </div>
-    <div class="home-button">
-      <button class="subtle-button home-button" {{action "home"}}>home</button>
     </div>
   {{else}}
     {{sign-in-modal signIn="signIn"}}

@@ -53,10 +53,12 @@
 
 .submit-button {
   float: right;
-  padding: $small-spacing / 2 $small-spacing / 2;
+  margin: $small-spacing / 2 $small-spacing;
+  // padding: $small-spacing / 2 $small-spacing / 2;
 }
 
 .cancel-button {
   float: left;
-  padding: $small-spacing / 2 $small-spacing / 2;
+  // margin: $small-spacing / 2;
+  // padding: $small-spacing / 2 $small-spacing / 2;
 }

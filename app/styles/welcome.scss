@@ -37,11 +37,20 @@
 .auth-button-container {
   .home-button {
     float: left;
+    margin: 0;
   }
 
-  div,
+  .sign-in-button {
+    margin: 0;
+  }
+
+  .sign-up-button {
+    margin: 0;
+  }
+
   button {
-    padding: $small-spacing / 2 $small-spacing / 2;
+    // padding: $small-spacing / 2 $small-spacing / 2;
     float: right;
+    height: $base-spacing * 2;
   }
 }
