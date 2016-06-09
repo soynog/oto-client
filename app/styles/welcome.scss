@@ -35,15 +35,8 @@
 
 // User Auth Buttons
 .auth-button-container {
-  position: fixed;
-  bottom: 0;
-  margin: $base-spacing 0 0;
-  width: 100%;
-
   div,
   button {
-    display: inline-block;
     padding: $small-spacing / 2 $small-spacing / 2;
-    float: right;
   }
 }
