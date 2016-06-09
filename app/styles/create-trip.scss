@@ -1,5 +1,9 @@
 
 // New Trip Form
+.create-trip-header {
+  margin: $base-spacing * 2 $small-spacing $small-spacing;
+}
+
 .submit-new-trip-button {
   border-radius: 50%;
   float:right;

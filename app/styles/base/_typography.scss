@@ -38,6 +38,13 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font-size: modular-scale(2);
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
 
 p {
   font-size: modular-scale(1);
@@ -128,4 +135,8 @@ p.trip-summary-subtitle {
   font-size: modular-scale(-1);
   font-weight: normal;
   margin: 0;
+}
+
+h3.new-trip-header {
+
 }
