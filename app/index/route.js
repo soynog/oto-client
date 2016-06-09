@@ -5,7 +5,7 @@ export default Ember.Route.extend({
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
   model () {
-    console.log("Index Page");
+    // console.log("Index Page", this.get('isAuthenticated'));
     if(this.get('isAuthenticated')) {
       this.transitionTo('trips');
     }

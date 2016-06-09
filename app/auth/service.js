@@ -33,7 +33,6 @@ export default Ember.Service.extend({
       this.get('credentials').set('id', result.user.id);
       this.get('credentials').set('email', result.user.email);
       this.get('credentials').set('token', result.user.token);
-      console.log("This is...",this.get('credentials'));
     });
   },
 
@@ -52,4 +51,9 @@ export default Ember.Service.extend({
     return this.get('ajax').del(`/sign-out/${this.get('credentials.id')}`)
     .finally(() => this.get('credentials').reset());
   },
+
+  clearCreds () {
+    console.log("Clearing Credentials");
+    this.get('credentials').reset();
+  }
 });
