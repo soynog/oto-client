@@ -23,11 +23,14 @@ body {
 
 // Forms
 
-form {
+form,
+.form {
   margin: $small-spacing * 2;
 }
 
-input[type="text"] {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
   background-color: rgba($base-background-color, 0);
   border: 0;
   border-bottom: $subtle-border;
@@ -40,18 +43,33 @@ input[type="text"] {
 // button {
 //   @extend .highlight-button; // Default button is highlight-button
 // }
+button {
+
+}
 
 .subtle-button {
-  background-color: rgba($base-background-color, 0);
+  background: rgba($base-background-color, 0);
   color: $subtle-font-color;
   font-size: modular-scale(1);
   font-weight: normal;
+  &:focus,
+  &:hover {
+    background: rgba($base-background-color, 0);
+    color: $base-font-color;
+    outline: none;
+  }
 }
 
 .highlight-button {
   background: $highlight-background;
   box-shadow: $button-box-shadow;
   font-weight: 100;
+  &:focus,
+  &:hover {
+    background-color: rgba($highlight-background-color, 0.85);
+    color: $base-font-color;
+    outline: none;
+  }
 }
 
 .danger-button {
