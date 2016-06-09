@@ -12,14 +12,11 @@ export default Model.extend({
   endDate: attr('date'),
   location: attr('string'),
   invitations: hasMany('invitation'),
-  // prettyStartDate: Ember.computed('startDate', function() {
-  //   return moment(this.get('startDate')).format("LL");
-  // }),
-  // prettyEndDate: Ember.computed('startDate', function() {
-  //   return moment(this.get('startDate')).format("LL");
-  // }),
   tripLength: Ember.computed('startDate', 'endDate', function() {
     return Math.round((this.get('endDate') - this.get('startDate'))/(1000 * 60 * 60 * 24));
+  }),
+  url: Ember.computed('id', function() {
+    return `http://localhost:4200/trips/${this.get('id')}`;
   }),
   // invitations: attr(),
   // users: hasMany('user')
