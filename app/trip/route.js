@@ -10,7 +10,9 @@ export default Ember.Route.extend({
   model (params) {
     return this.get('store').findRecord('trip', params.trip_id);
   },
+
   actions: {
+
     updateTrip (data) {
       console.log("Authenticated?",this.get('isAuthenticated'));
       let id = this.context.get('id');
