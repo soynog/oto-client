@@ -1,0 +1,7 @@
+<div class="trip-list-container row">
+  {{#each model as |trip index|}}
+    {{trip-summary trip=trip index=index class="trip-summary-container"}}
+  {{/each}}
+</div>
+
+{{create-trip-button}}

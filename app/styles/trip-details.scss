@@ -1,0 +1,58 @@
+.trip-details-header {
+  padding: $small-spacing * 2 0 0;
+  background: $highlight-background;
+  min-height: $base-spacing * 4.5;
+  text-align: center;
+}
+
+.trip-details-body {
+  padding: $small-spacing;
+  text-align: left;
+
+  @include span-columns(4 of 4);
+  @include shift(0);
+
+  @include media($tablet) {
+    @include span-columns(6 of 8);
+    @include shift(1);
+  }
+
+  @include media($desktop) {
+    @include span-columns(8 of 12);
+    @include shift(2);
+  }
+}
+
+.trip-description {
+  margin: $small-spacing 0;
+  min-height: $base-spacing; // So that span doesn't disappear
+}
+
+.participants-list-header {
+  margin: $small-spacing 0;
+}
+
+.participants-list {
+  margin: $small-spacing / 2 0;
+  // text-align: left;
+
+  li {
+    border: $thin-border;
+    display: inline-block;
+    line-height: 0;
+    overflow: hidden;
+    padding: $base-font-size 0 0;
+    text-align: center;
+  }
+}
+
+.trip-action-button-container {
+  text-align: center;
+}
+
+.trip-footer-button-container {
+  button {
+    float: left;
+    padding: $small-spacing *0.75 $small-spacing;
+  }
+}

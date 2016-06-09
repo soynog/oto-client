@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   actions: {
     signOut () {
       this.get('auth').signOut()
-      .then(() => this.transitionTo('sign-in'))
+      .then(() => this.transitionTo('application'))
       .then(() => {
         this.get('flashMessages').warning('You have been signed out.');
       })
@@ -26,7 +26,7 @@ export default Ember.Route.extend({
       if (unauthorized) {
         this.get('flashMessages')
         .danger('You must be authenticated to access this page.');
-        this.transitionTo('/sign-in');
+        // this.transitionTo('/sign-in');
       } else {
         this.get('flashMessages')
         .danger('There was a problem. Please try again.');
@@ -34,5 +34,34 @@ export default Ember.Route.extend({
 
       return false;
     },
+
+    signIn (credentials) {
+      return this.get('auth').signIn(credentials)
+      .then(() => this.refresh())
+      .then(() => this.get('flashMessages').success('Thanks for signing in!'))
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There was a problem. Please try again.');
+      });
+    },
+
+    signUp (credentials) {
+      console.log("Sign Up Action: ", credentials);
+      this.get('auth').signUp(credentials)
+      .then(() => this.get('auth').signIn(credentials))
+      .then(() => this.refresh())
+      .then(() => {
+        this.get('flashMessages')
+        .success('Successfully signed-up! You have also been signed-in.');
+      })
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There was a problem. Please try again.');
+      });
+    },
+
+    home () {
+      this.transitionTo('application');
+    }
   },
 });

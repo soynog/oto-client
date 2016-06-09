@@ -1,0 +1,60 @@
+// Welcome Page
+.oto-subtitle-container {
+  @include span-columns(2);
+  @include shift(1);
+  border-left: 2px solid $heading-font-color;
+  padding-left: $small-spacing;
+  text-align: left;
+
+  @include media($tablet) {
+    @include span-columns(2);
+    @include shift(3);
+  }
+
+  @include media($desktop) {
+    @include span-columns(2);
+    @include shift(5);
+  }
+}
+
+.welcome-greeting-container {
+  margin: $base-spacing * 6 0 $base-spacing * 4;
+}
+
+.create-trip-button {
+  border-radius: 50%;
+  font-size: 70px;
+  font-weight: 100;
+  height: 67px;
+  line-height: 0;
+  margin: 0 0 $base-spacing;
+  overflow: hidden;
+  padding: 5px 0 0;
+  width: 67px;
+}
+
+// User Auth Buttons
+.auth-button-container {
+  padding-bottom: 0;
+
+  .home-button {
+    float: left;
+    margin: 0;
+    padding-bottom: $small-spacing / 2;
+  }
+
+  .sign-in-button {
+    margin: 0;
+  }
+
+  .sign-up-button {
+    margin: 0;
+  }
+
+  button {
+    padding-left: $small-spacing / 2;
+    padding-right: $small-spacing / 2;
+    float: right;
+    height: $base-spacing * 2;
+  }
+}

@@ -1,0 +1,7 @@
+{{#each model as |invitation|}}
+  <p>{{invitation.user.email}}, {{invitation.status}}, {{invitation.trip.name}}</p>
+{{/each}}
+
+<button {{action 'createInvitation'}}>Create Invitation</button>
+
+{{outlet}}

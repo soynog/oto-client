@@ -11,6 +11,8 @@ export default Ember.Service.extend({
       data: {
         credentials: {
           email: credentials.email,
+          first_name: credentials.firstName,
+          last_name: credentials.lastName,
           password: credentials.password,
           password_confirmation: credentials.passwordConfirmation,
         },
@@ -31,6 +33,7 @@ export default Ember.Service.extend({
       this.get('credentials').set('id', result.user.id);
       this.get('credentials').set('email', result.user.email);
       this.get('credentials').set('token', result.user.token);
+      console.log("This is...",this.get('credentials'));
     });
   },
 

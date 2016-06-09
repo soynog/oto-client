@@ -6,6 +6,8 @@
     "ember-cli-test-loader": "0.2.2",
     "ember-qunit-notifications": "0.1.0",
     "bootstrap-sass": "^3.3.6",
-    "blob-polyfill": "^1.0.20150320"
+    "blob-polyfill": "^1.0.20150320",
+    "moment": "^2.13.0",
+    "pikaday": "^1.4.0"
   }
 }
