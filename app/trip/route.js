@@ -2,19 +2,17 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   auth: Ember.inject.service(),
-  user: Ember.computed.alias('auth.credentials.email'),
+  user: Ember.computed.alias('auth.credentials.id'),
   isAuthenticated: Ember.computed.alias('auth.isAuthenticated'),
 
   flashMessages: Ember.inject.service(),
 
   model (params) {
-    this.get('store').findRecord('trip', params.trip_id).then((trip) => {
-      console.log("Trip is: ", trip.get('name'));
-      console.log("Invitations: ", trip.get('invitations'));
-    });
     return this.get('store').findRecord('trip', params.trip_id);
   },
+
   actions: {
+
     updateTrip (data) {
       console.log("Authenticated?",this.get('isAuthenticated'));
       let id = this.context.get('id');
@@ -43,24 +41,28 @@ export default Ember.Route.extend({
     },
 
     joinTrip(trip, userId) {
-      console.log("Join Trip Action Fired", trip, userId);
-      this.get('store').findRecord('user', userId)
-      .then((user) => {
-        let data = {
-          status: "going",
-          trip,
-          user,
-        };
-        return data;
-      })
-      .then((data) => {
-        let invitation = this.get('store').createRecord('invitation', data);
-        invitation.save();
-      })
-      .catch(() => {
-        this.get('flashMessages')
-        .warning('Sorry, something went wrong. Have you already joined this trip?');
-      });
+      if(!trip.isInvited(userId)) {
+        this.get('store').findRecord('user', userId)
+        .then((user) => {
+          let data = {
+            status: "going",
+            trip,
+            user,
+          };
+          return data;
+        })
+        .then((data) => {
+          let invitation = this.get('store').createRecord('invitation', data);
+          invitation.save();
+        })
+        .catch(() => {
+          this.get('flashMessages')
+          .warning('Sorry, something went wrong. Have you already joined this trip?');
+        });
+      } else {
+        console.log("You've already joined!");
+      }
     }
+
   }
 });
