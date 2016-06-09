@@ -32,7 +32,9 @@
 
 <div class=auth-button-container>
   {{#if isAuthenticated}}
-    <button class="subtle-button" {{action "signOut"}}>Sign Out</button>
+    <div>
+      <button class="subtle-button sign-out-button" {{action "signOut"}}>sign out</button>
+    </div>
   {{else}}
     {{sign-in-modal signIn="signIn"}}
     {{sign-up-modal signUp="signUp"}}
