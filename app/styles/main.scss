@@ -39,12 +39,15 @@ input[type="password"] {
   padding: $small-spacing / 2 $small-spacing $small-spacing * 1.5;
 }
 
-// Buttons
+// Buttons & Links
 // button {
 //   @extend .highlight-button; // Default button is highlight-button
 // }
-button {
-
+a {
+  &:focus,
+  &:hover {
+    color: tint($action-color, 50%);
+  }
 }
 
 .subtle-button {
@@ -76,6 +79,12 @@ button {
   background: rgba(red, 0.7);
   box-shadow: $button-box-shadow;
   font-weight: 100;
+  &:focus,
+  &:hover {
+    background-color: rgba(red, 0.85);
+    color: $base-font-color;
+    outline: none;
+  }
 }
 
 .pill-button {

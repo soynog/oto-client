@@ -38,6 +38,7 @@
     <div>
       <button class="subtle-button sign-out-button" {{action "signOut"}}>sign out</button>
     </div>
+    {{change-password-modal changePW="changePW"}}
   {{else}}
     {{sign-in-modal signIn="signIn"}}
     {{sign-up-modal signUp="signUp"}}
@@ -45,7 +46,8 @@
 </div>
 
 
-
-{{#each flashMessages.queue as |flash|}}
-  {{flash-message flash=flash}}
-{{/each}}
+<div class="flash-message-container row">
+  {{#each flashMessages.queue as |flash|}}
+    {{flash-message flash=flash}}
+  {{/each}}
+</div>

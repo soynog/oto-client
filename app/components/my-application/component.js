@@ -19,6 +19,9 @@ export default Ember.Component.extend({
     },
     home () {
       this.sendAction('home');
+    },
+    changePW (passwords) {
+      this.sendAction('changePW', passwords);
     }
   },
 });
