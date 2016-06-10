@@ -17,13 +17,13 @@
   @include omega();
 
   @include media($tablet) {
-    @include span-columns(4 of 8);
-    @include shift(2);
+    @include span-columns(6 of 8);
+    @include shift(1);
   }
 
   @include media($desktop) {
-    @include span-columns(4 of 12);
-    @include shift(4);
+    @include span-columns(8 of 12);
+    @include shift(2);
   }
 
   .trip-summary-button {
@@ -36,6 +36,14 @@
     padding: 0;
     position: relative;
     width: 100%;
+
+    @include media($tablet) {
+      height: $base-spacing * 4;
+    }
+
+    @include media($desktop) {
+      height: $base-spacing * 4.5;
+    }
   }
 }
 
