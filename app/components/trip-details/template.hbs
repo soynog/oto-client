@@ -27,38 +27,10 @@
     <p class='subtle-text small-text'>Share:<br/> <a href={{trip.url}}>{{trip.url}}</a></p>
 
     <div class="trip-cards-container">
-      <div class="trip-card">
-        <div class="trip-card-header">
-          <h4>food</h4>
-        </div>
-        <div class="trip-card-body">
-          <p class="small-text subtle-text"> Coming Soon </p>
-        </div>
-      </div>
-      <div class="trip-card">
-        <div class="trip-card-header">
-          <h4>rides</h4>
-        </div>
-        <div class="trip-card-body">
-          <p class="small-text subtle-text"> Coming Soon </p>
-        </div>
-      </div>
-      <div class="trip-card">
-        <div class="trip-card-header">
-          <h4>activities</h4>
-        </div>
-        <div class="trip-card-body">
-          <p class="small-text subtle-text"> Coming Soon </p>
-        </div>
-      </div>
-      <div class="trip-card">
-        <div class="trip-card-header">
-          <h4>gear checklist</h4>
-        </div>
-        <div class="trip-card-body">
-          <p class="small-text subtle-text"> Coming Soon </p>
-        </div>
-      </div>
+      {{trip-card title="meals" description="coming soon!"}}
+      {{trip-card title="rides" description="coming soon!"}}
+      {{trip-card title="activities" description="coming soon!"}}
+      {{trip-card title="gear list" description="coming soon!"}}
     </div>
 
     <div class="trip-action-button-container">
