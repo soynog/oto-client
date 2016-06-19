@@ -46,7 +46,7 @@
   }
 }
 
-.trip-share-link-container {
+.trip-link-share-container {
   align-items: stretch;
   background-color: $subtle-background-color;
   border-radius: 16px;
@@ -55,9 +55,10 @@
   flex-flow: row nowrap;
   height: 31px;
   justify-content: space-between;
+  margin: $small-spacing 0;
   width: auto;
 
-  .trip-share-link-body {
+  .trip-link-share-body {
     align-items: center;
     border-radius: 16px 0 0 16px;
     display: flex;
@@ -65,7 +66,7 @@
     text-align: right;
   }
 
-  .trip-share-link-button {
+  .trip-link-share-header {
     align-items: center;
     background: $highlight-background;
     border-radius: 0 16px 16px 0;
