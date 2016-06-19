@@ -25,6 +25,14 @@
       {{/each}}
     </ul>
     <p class='subtle-text small-text'>Share:<br/> <a href={{trip.url}}>{{trip.url}}</a></p>
+
+    <div class="trip-cards-container">
+      <div class="trip-card"></div>
+      <div class="trip-card"></div>
+      <div class="trip-card"></div>
+      <div class="trip-card"></div>
+    </div>
+
     <div class="trip-action-button-container">
       <button class="highlight-button pill-button" {{action "joinTrip"}}>Join Trip</button>
       <button class="highlight-button pill-button" {{action "submit"}}>Submit Changes</button>

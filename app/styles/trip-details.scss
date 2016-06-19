@@ -56,3 +56,19 @@
     padding: $small-spacing *0.75 $small-spacing;
   }
 }
+
+.trip-cards-container {
+  border: solid 1px red;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  .trip-card {
+    background-color: $white;
+    border-radius: 10px;
+    height: 160px;
+    margin: $small-spacing / 2;
+    opacity: 0.3;
+    width: 160px;
+  }
+}
