@@ -58,17 +58,26 @@
 }
 
 .trip-cards-container {
-  border: solid 1px red;
   display: flex;
   flex-flow: row wrap;
-  justify-content: center;
+  justify-content: space-around;
 
   .trip-card {
-    background-color: $white;
+    background-color: rgba($white, 0.3);
     border-radius: 10px;
     height: 160px;
     margin: $small-spacing / 2;
-    opacity: 0.3;
     width: 160px;
+
+    .trip-card-header {
+      background: $highlight-background;
+      border-radius: 10px 10px 0 0;
+      height: 36px;
+      text-align: center;
+    }
+
+    .trip-card-body {
+
+    }
   }
 }
