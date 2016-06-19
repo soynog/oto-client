@@ -46,6 +46,34 @@
   }
 }
 
+.trip-share-link-container {
+  align-items: stretch;
+  background-color: $subtle-background-color;
+  border-radius: 16px;
+  box-shadow: $button-box-shadow;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 31px;
+  justify-content: space-between;
+  width: auto;
+
+  .trip-share-link-body {
+    align-items: center;
+    border-radius: 16px 0 0 16px;
+    display: flex;
+    padding: 0 $small-spacing;
+    text-align: right;
+  }
+
+  .trip-share-link-button {
+    align-items: center;
+    background: $highlight-background;
+    border-radius: 0 16px 16px 0;
+    display: flex;
+    padding: 0 $small-spacing;
+  }
+}
+
 .trip-action-button-container {
   text-align: center;
 }
@@ -53,11 +81,12 @@
 .trip-footer-button-container {
   button {
     float: left;
-    padding: $small-spacing *0.75 $small-spacing;
+    padding: $small-spacing * 0.75 $small-spacing;
   }
 }
 
 .trip-cards-container {
+  box-shadow: $button-box-shadow;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;

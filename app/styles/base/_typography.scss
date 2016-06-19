@@ -129,6 +129,13 @@ h2.modal-header {
   letter-spacing: 1px;
 }
 
+.v-small-text {
+  font-size: modular-scale(-2);
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+
 // User Home Page
 h3.trip-summary-title {
   font-weight: normal;
