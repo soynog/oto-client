@@ -14,7 +14,10 @@
     @include shift(1);
     border-left: 2px solid $heading-font-color;
     padding-left: $small-spacing;
-    text-align: left;
+
+    .oto-subtitle {
+      text-align: left;
+    }
 
     @include media($tablet) {
       @include span-columns(2);
