@@ -1,13 +1,10 @@
 // Welcome Page
-// .oto-logo {
-//   margin: $small-spacing / 8 0 0;
-// }
-
-.oto-logo-row {
-  margin: $base-spacing * 2 0;
+.oto-logo {
+  margin: $small-spacing / 8 0 0;
 }
 
 .oto-subtitle-row {
+  margin: $base-spacing 0;
 
   .oto-subtitle-container {
     @include span-columns(2);
