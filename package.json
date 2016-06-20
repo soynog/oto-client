@@ -42,6 +42,7 @@
     "ember-data": "^2.5.0",
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.5",
+    "ember-inline-svg": "0.1.5",
     "ember-load-initializers": "^0.5.1",
     "ember-local-storage": "1.1.0",
     "ember-modal-dialog": "0.8.4",
