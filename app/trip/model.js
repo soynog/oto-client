@@ -15,8 +15,11 @@ export default Model.extend({
   tripLength: Ember.computed('startDate', 'endDate', function() {
     return Math.round((this.get('endDate') - this.get('startDate'))/(1000 * 60 * 60 * 24));
   }),
+  // url: Ember.computed('id', function() {
+  //   return `http://soynog.github.io/oto-client/#/trips/${this.get('id')}`;
+  // }),
   url: Ember.computed('id', function() {
-    return `http://soynog.github.io/oto-client/#/trips/${this.get('id')}`;
+    return window.location.href;
   }),
   isInvited (userId) {
     return this.get('invitations').any((inv) => inv.get('user.id') === userId.toString());
