@@ -1,8 +1,19 @@
 .trip-details-header {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
   padding: $small-spacing * 2 0 0;
   background: $highlight-background;
   min-height: $base-spacing * 4.5;
   text-align: center;
+
+  .trip-details-subtitle {
+    align-self: center;
+  }
+
+  .trip-edit-icon {
+    align-self: flex-end;
+  }
 }
 
 .trip-details-body {

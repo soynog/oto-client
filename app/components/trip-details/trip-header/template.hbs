@@ -1,10 +1,15 @@
-<h2>
-  <span class="trip-name" contenteditable>{{trip.name}}</span>
-</h2>
-<p class="subtle-text small-text">
-  {{moment-format trip.startDate 'll'}} -
-  {{moment-format trip.endDate 'll'}}
-</p>
-<p class="subtle-text small-text">
-  <span class="trip-location" contenteditable>{{trip.location}}</span>
-</p>
+<div class="trip-details-title">
+  <h2>
+    <span class="trip-name" contenteditable>{{trip.name}}</span>
+  </h2>
+</div>
+<div class="trip-details-subtitle">
+  <p class="subtle-text small-text">
+    {{moment-format trip.startDate 'll'}} -
+    {{moment-format trip.endDate 'll'}}
+  </p>
+  <p class="subtle-text small-text">
+    <span class="trip-location" contenteditable>{{trip.location}}</span>
+  </p>
+</div>
+<div class="trip-edit-icon ion-edit"></div>
