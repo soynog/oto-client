@@ -1,17 +1,7 @@
 {{!-- {{#if isAuthenticated}}<h4>Current User: {{user}}</h4>{{/if}} --}}
 
-<div class="trip-details-header">
-  <h2>
-    <span class="trip-name" contenteditable>{{trip.name}}</span>
-  </h2>
-  <p class="subtle-text small-text">
-    {{moment-format trip.startDate 'll'}} -
-    {{moment-format trip.endDate 'll'}}
-  </p>
-  <p class="subtle-text small-text">
-    <span class="trip-location" contenteditable>{{trip.location}}</span>
-  </p>
-</div>
+{{trip-details.trip-header trip=trip}}
+
 <div class="row">
   <div class="trip-details-body">
     <p class="small-text trip-description">
