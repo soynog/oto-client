@@ -16,49 +16,7 @@ body {
 // button {
 //   @extend .highlight-button; // Default button is highlight-button
 // }
-a {
-  &:focus,
-  &:hover {
-    color: tint($action-color, 50%);
-  }
-}
 
-.subtle-button {
-  background: rgba($base-background-color, 0);
-  color: $subtle-font-color;
-  font-size: modular-scale(1);
-  font-weight: normal;
-  &:focus,
-  &:hover {
-    background: rgba($base-background-color, 0);
-    color: $base-font-color;
-    outline: none;
-  }
-}
-
-.highlight-button {
-  background: $highlight-background;
-  box-shadow: $button-box-shadow;
-  font-weight: 100;
-  &:focus,
-  &:hover {
-    background-color: rgba($highlight-background-color, 0.85);
-    color: $base-font-color;
-    outline: none;
-  }
-}
-
-.danger-button {
-  background: rgba(red, 0.7);
-  box-shadow: $button-box-shadow;
-  font-weight: 100;
-  &:focus,
-  &:hover {
-    background-color: rgba(red, 0.85);
-    color: $base-font-color;
-    outline: none;
-  }
-}
 
 .pill-button {
   border-radius: 100px;
