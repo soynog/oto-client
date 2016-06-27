@@ -1,3 +1,22 @@
+// Forms
+form {
+  margin: $small-spacing * 2;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    display: block;
+    font-family: $base-font-family;
+    font-size: $base-font-size;
+  background-color: rgba($base-background-color, 0);
+  border: 0;
+  border-bottom: $subtle-border;
+  border-radius: 0;
+  color: $base-font-color;
+  padding: $small-spacing / 2 $small-spacing $small-spacing * 1.5;
+}
+
 fieldset {
   background-color: transparent;
   border: 0;
@@ -17,13 +36,13 @@ label {
   margin-bottom: $small-spacing / 2;
 }
 
-input,
-select,
-textarea {
-  display: block;
-  font-family: $base-font-family;
-  font-size: $base-font-size;
-}
+// input,
+// select,
+// textarea {
+//   display: block;
+//   font-family: $base-font-family;
+//   font-size: $base-font-size;
+// }
 
 #{$all-text-inputs},
 select[multiple] {

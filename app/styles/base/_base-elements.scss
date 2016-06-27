@@ -12,22 +12,6 @@ body {
   min-height: 100%;
 }
 
-// Forms
-form {
-  margin: $small-spacing * 2;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-  background-color: rgba($base-background-color, 0);
-  border: 0;
-  border-bottom: $subtle-border;
-  border-radius: 0;
-  color: $base-font-color;
-  padding: $small-spacing / 2 $small-spacing $small-spacing * 1.5;
-}
-
 // Buttons & Links
 // button {
 //   @extend .highlight-button; // Default button is highlight-button
