@@ -1,36 +1,77 @@
 #{$all-buttons} {
   appearance: none;
-  background-color: $action-color;
+  // background-color: $action-color;
   border: 0;
-  border-radius: $base-border-radius;
+  // border-radius: $base-border-radius;
   color: $base-font-color;
   cursor: pointer;
-  display: inline-block;
+  // display: inline-block;
   font-family: $base-font-family;
   font-size: $base-font-size;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 600;
-  line-height: 1;
-  padding: $small-spacing $base-spacing;
-  text-decoration: none;
+  // -webkit-font-smoothing: antialiased;
+  // font-weight: 600;
+  // line-height: 1;
+  // padding: $small-spacing $base-spacing;
+  // text-decoration: none;
   // transition: background-color $base-duration $base-timing;
-  transition: all $base-duration $base-timing;
+  // transition: all $base-duration $base-timing;
   user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
+  // vertical-align: middle;
+  // white-space: nowrap;
 
-  &:hover,
-  &:focus {
-    // background-color: shade($action-color, 20%);
-    // color: $base-font-color;
-  }
+  // &:hover,
+  // &:focus {
+  //   // background-color: shade($action-color, 20%);
+  //   // color: $base-font-color;
+  // }
 
   &:disabled {
     cursor: not-allowed;
-    opacity: 0.5;
+    // opacity: 0.5;
 
-    &:hover {
-      // background-color: $action-color;
-    }
+    // &:hover {
+    //   // background-color: $action-color;
+    // }
+  }
+}
+
+
+button,
+.highlight-button {
+  background: $highlight-background;
+  box-shadow: $button-box-shadow;
+  font-weight: 100;
+
+  &:focus,
+  &:hover {
+    background-color: rgba($highlight-background-color, 0.85);
+    color: $base-font-color;
+    outline: none;
+  }
+}
+
+.subtle-button {
+  background: rgba($base-background-color, 0);
+  color: $subtle-font-color;
+  font-size: modular-scale(1);
+  font-weight: normal;
+
+  &:focus,
+  &:hover {
+    background: rgba($base-background-color, 0);
+    color: $base-font-color;
+    outline: none;
+  }
+}
+
+.danger-button {
+  background: rgba(red, 0.7);
+  box-shadow: $button-box-shadow;
+  font-weight: 100;
+  &:focus,
+  &:hover {
+    background-color: rgba(red, 0.85);
+    color: $base-font-color;
+    outline: none;
   }
 }
