@@ -1,4 +1,4 @@
-// Background and Layout
+// Background Elements
 html {
   min-height: 100%;
 }
@@ -10,21 +10,10 @@ body {
   background-size: cover;
   margin: 0;
   min-height: 100%;
-
-  .outer-container {
-    @include outer-container();
-  }
-
-  .row {
-    @include row();
-    text-align: center;
-  }
 }
 
 // Forms
-
-form,
-.form {
+form {
   margin: $small-spacing * 2;
 }
 
