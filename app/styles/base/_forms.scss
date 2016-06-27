@@ -3,20 +3,6 @@ form {
   margin: $small-spacing * 2;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    display: block;
-    font-family: $base-font-family;
-    font-size: $base-font-size;
-  background-color: rgba($base-background-color, 0);
-  border: 0;
-  border-bottom: $subtle-border;
-  border-radius: 0;
-  color: $base-font-color;
-  padding: $small-spacing / 2 $small-spacing $small-spacing * 1.5;
-}
-
 fieldset {
   background-color: transparent;
   border: 0;
@@ -36,34 +22,37 @@ label {
   margin-bottom: $small-spacing / 2;
 }
 
-// input,
-// select,
-// textarea {
-//   display: block;
-//   font-family: $base-font-family;
-//   font-size: $base-font-size;
-// }
+input,
+select,
+textarea {
+  display: block;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+}
 
 #{$all-text-inputs},
 select[multiple] {
-  background-color: $base-background-color;
-  border: $base-border;
-  border-radius: $base-border-radius;
-  box-shadow: $form-box-shadow;
-  box-sizing: border-box;
-  margin-bottom: $small-spacing;
-  padding: $base-spacing / 3;
-  transition: border-color $base-duration $base-timing;
-  width: 100%;
+  background-color: transparent;
+  border: 0;
+  border-bottom: $subtle-border;
+  border-radius: 0;
+  color: $base-font-color;
+  display: block;
+  font-family: $base-font-family;
+  margin: $small-spacing;
+  padding: $small-spacing / 2 $small-spacing $small-spacing * 1.5;
+  transition: border-bottom $base-duration $base-timing;
+  width: 90%;
 
   &:hover {
-    border-color: shade($base-border-color, 20%);
+    border-bottom: $subtle-border-highlight;
+    transition: border-bottom $base-duration $base-timing;
   }
 
   &:focus {
-    border-color: $action-color;
-    box-shadow: $form-box-shadow-focus;
+    border-bottom: $subtle-border-highlight;
     outline: none;
+    transition: border-bottom $base-duration $base-timing;
   }
 
   &:disabled {
@@ -95,8 +84,8 @@ textarea {
   width: 100%;
 }
 
-select {
-  margin-bottom: $small-spacing;
-  max-width: 100%;
-  width: auto;
-}
+// select {
+//   margin-bottom: $small-spacing;
+//   max-width: 100%;
+//   width: auto;
+// }

@@ -61,6 +61,7 @@ $action-color: rgba(tint($apple-green, 50%), 0.7);
 // Border
 $base-border-color: $base-font-color;
 $subtle-border: 2px solid rgba($base-border-color, 0.2);
+$subtle-border-highlight: 2px solid rgba($base-border-color, 0.5);
 $base-border: 2px solid $base-border-color;
 $thin-border: 1px solid $base-border-color;
 
