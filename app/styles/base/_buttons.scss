@@ -86,6 +86,8 @@ button,
   border-radius: 50%;
   display: table-cell;
   height: $size;
+  min-height: $size;
+  min-width: $size;
   overflow: hidden;
   text-align: center;
   vertical-align: middle;
