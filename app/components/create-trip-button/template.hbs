@@ -1,7 +1,7 @@
-<div class="create-trip-button-container row">
+<div class="create-trip-button-container">
   <p>Create a new trip</p>
-  {{#link-to 'trips.new'}}
-    <button class="create-trip-button highlight-button md-circle">+</button>
+  {{#link-to 'trips.new' tagName="button" class="create-trip-button highlight-button md-circle"}}
+    +
   {{/link-to}}
   {{!-- <button>Or Join a Trip</button> --}}
 </div>

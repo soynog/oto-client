@@ -1,0 +1,6 @@
+.create-trip-button-container {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding-top: $base-spacing * 2;
+}
