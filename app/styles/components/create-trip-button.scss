@@ -4,3 +4,11 @@
   align-items: center;
   padding-top: $base-spacing * 2;
 }
+
+.create-trip-button {
+  @include circle(67px);
+  font-size: 70px;
+  font-weight: 100;
+  line-height: 0;
+  margin: 0 0 $base-spacing;
+}
